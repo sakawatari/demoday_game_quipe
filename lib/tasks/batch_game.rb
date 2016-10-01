@@ -1,9 +1,9 @@
-class Tasks::BatchOther
+class Tasks::BatchGame
     def self.execute
         require 'open-uri'
         require 'nokogiri'
 
-        url = 'http://search.jp.playstation.com/search?site=FIZ02WOB&sort=1&design=2&group=1&charset=UTF-8&ps4Disk=1&ps4Download=1&genre=14&period1=0&period3=0&onsaleAndSoon=1&count=100#search-result'
+        url = 'http://search.jp.playstation.com/search?query=&charset=UTF-8&count=100&sort=1&onsaleAndSoon=0&site=FIZ02WOB&design=2&period4=9&period3=2016&ps4Disk=1&period2=1&period1=2000&ps4Download=1&group=1&start=800'
 
         charset = nil
         html = open(url) do |f|
@@ -19,16 +19,15 @@ class Tasks::BatchOther
             title = software.css('.item-title').inner_text
             maker = software.css('.item-maker').inner_text
             maker_genre = software.css('.item-genre').inner_text
-            release_date = software.css('.item-release-date').inner_text
+            released_date = software.css('.item-release-date').inner_text
 
-            gamesoft = { :title => title, :maker => maker, :maker_genre => maker_genre, :release_date => release_date }
+            gamesoft = { :title => title, :maker => maker, :maker_genre => maker_genre, :released_date => released_date }
 
-            Ps4BasicOtherList.create(
+            Game.create(
                 title: gamesoft[:title],
                 maker: gamesoft[:maker],
-                genre: "other",
                 maker_genre: gamesoft[:maker_genre],
-                release_date: gamesoft[:release_date]
+                released_date: gamesoft[:released_date]
                 )
         end
     end

@@ -11,115 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930020818) do
+ActiveRecord::Schema.define(version: 20161001145608) do
 
-  create_table "ps4_basic_action_lists", force: :cascade do |t|
+  create_table "games", force: :cascade do |t|
     t.string   "title"
     t.string   "maker"
     t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "released_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
-  create_table "ps4_basic_adventure_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
+  create_table "genres", force: :cascade do |t|
     t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "ps4_basic_fighting_lists", force: :cascade do |t|
-    t.string   "title"
+  create_table "hardwares", force: :cascade do |t|
+    t.string   "hardware"
     t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_music_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_other_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_rpg_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_shooting_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_simulation_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_sports_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_basic_table_lists", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "maker_genre"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "ps4_software_basics", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "genre"
-    t.string   "release_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

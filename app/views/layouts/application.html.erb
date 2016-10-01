@@ -7,11 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
+    <header>
+        <h1>Game Quipe</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Game Quipeとは</a></li>
+            <li><a href="#">おすすめ</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
     
-</header>
+    <div class="search-bar">
+        <p>search:<input type="search" name="search" placeholder="keyword..."></p>
+    </div>
 
 <%= yield %>
 
+    <footer>
+        <p>運営会社KAZAKUMO GAMES株式会社</p>
+        <p>© 2016 Copyright KAZAKUMO GAMES Corp.</p>
+    </footer>
 </body>
 </html>
