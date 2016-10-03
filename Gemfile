@@ -48,3 +48,5 @@ gem 'hirb'
 gem 'hirb-unicode'
 
 gem 'nokogiri'
+
+gem 'ransack'

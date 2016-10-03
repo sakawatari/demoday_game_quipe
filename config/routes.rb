@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'top/index'
+  resources :games, only: [:index]
 
-    root 'top#index'
+  root 'top#index'
 end

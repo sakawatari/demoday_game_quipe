@@ -3,7 +3,7 @@ class Tasks::BatchGame
         require 'open-uri'
         require 'nokogiri'
 
-        url = 'http://search.jp.playstation.com/search?query=&charset=UTF-8&count=100&sort=1&onsaleAndSoon=0&site=FIZ02WOB&design=2&period4=9&period3=2016&ps4Disk=1&period2=1&period1=2000&ps4Download=1&group=1&start=800'
+        url = 'http://search.jp.playstation.com/search?charset=UTF-8&count=100&onsaleAndSoon=0&site=FIZ02WOB&design=2&genre=14&period3=0&ps4Disk=1&period1=0&ps4Download=0&group=1&sort=1#search-result'
 
         charset = nil
         html = open(url) do |f|
@@ -26,6 +26,7 @@ class Tasks::BatchGame
             Game.create(
                 title: gamesoft[:title],
                 maker: gamesoft[:maker],
+                genre: "other",
                 maker_genre: gamesoft[:maker_genre],
                 released_date: gamesoft[:released_date]
                 )

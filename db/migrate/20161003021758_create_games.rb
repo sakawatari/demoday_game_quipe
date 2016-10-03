@@ -3,6 +3,7 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
         t.string :title
         t.string :maker
+        t.string :genre
         t.string :maker_genre
         t.string :released_date
         t.timestamps null: false
