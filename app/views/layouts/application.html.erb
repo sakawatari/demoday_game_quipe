@@ -4,11 +4,12 @@
   <title>Game Quipe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
     <header>
-        <h1>Game Quipe</h1>
+        <%= link_to 'Game Quipe', root_path %>
     </header>
 
     <nav>
@@ -25,7 +26,6 @@
         <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
         <% end %>
     </dl>
-
 <%= yield %>
 
     <footer>

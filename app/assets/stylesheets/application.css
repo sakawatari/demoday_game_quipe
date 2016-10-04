@@ -10,11 +10,13 @@ header {
     text-align: center;
 }
 
-header h1 {
+header a {
     color: white;
     line-height: 100px;
     font-size: 50px;
     margin: 0;
+    text-decoration: none;
+
 }
 
 nav {
@@ -51,41 +53,44 @@ nav li a:hover {
 }
 
 dl.searchbox{
-    width: 350px;
+    width: 75%;
     position:relative;
-    background-color:#fff;
+    background-color:#464646;
     border:1px solid #aaa;
-    border-radius:6px;
+    border-radius:20px;
+    margin: 20px auto;
 }
 dl.searchbox dt{
     padding:3px;
 }
 dl.searchbox dt input{
-    width:70%;
+    width:95%;
     height:30px;
     line-height:30px;
+    padding-left:10px;
     background:none;
     border:none;
+    color: #efefef;
 }
 dl.searchbox dd{
     position:absolute;
     top:1px;
     right:1px;
-    width:30%;
 }
 .search-btn{
     display:block;
-    background:#5fad35;
-    width:100%;
+    background:#767676;
+    width:36px;
     height:36px;
     line-height:36px;
     border:none;
-    border-radius: 0 6px 6px 0;
+    border-radius: 100px;
     color:#FFF;
+    float: right;
 }
 
 .search-btn:hover {
-    background:#228B22;
+    cursor: pointer;
 }
 
 footer {
