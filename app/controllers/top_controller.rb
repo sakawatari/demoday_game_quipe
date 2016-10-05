@@ -1,5 +1,7 @@
 class TopController < ApplicationController
-  def index
-      @games = Game.all
-  end
+    def index
+        @q = Game.ransack(params[:q])
+        @genres = Genre.all
+    end
+    
 end
