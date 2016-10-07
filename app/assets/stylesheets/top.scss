@@ -1,3 +1,50 @@
-// Place all the styles related to the Top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#select_genre {
+    width: 850px;
+    margin: 0 auto;
+}
+
+#select_genre h1 {
+    width: 250px;
+    font-size: 60px;
+    text-align: center;
+    border-top: 3px solid #3C3C3C;
+    border-bottom: 3px solid #3C3C3C;
+    color: #3C3C3C;
+    letter-spacing: 5px;
+    margin: 10px auto;
+    padding: 5px 0;
+}
+
+#select_genre ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+#select_genre li {
+    list-style: none;
+    margin: 10px auto;
+}
+
+.btn {
+    width: 230px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #3C3C3C;
+    color: white;
+    font-size: 30px;
+    border-style: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(217, 202, 177);
+    color:#3C3C3C;
+    border: 5px dashed #3C3C3C;
+    
+}

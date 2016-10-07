@@ -12,6 +12,7 @@
         <%= link_to 'Game Quipe', root_path %>
     </header>
 
+<!--
     <nav>
         <ul>
             <li><a href="#">Game Quipeとは</a></li>
@@ -19,6 +20,7 @@
             <li><a href="#">Login</a></li>
         </ul>
     </nav>
+-->
     
     <dl class="searchbox">
         <%= search_form_for @search, url: games_path do |f| %>
@@ -29,7 +31,6 @@
 <%= yield %>
 
     <footer>
-        <p>運営会社KAZAKUMO GAMES株式会社</p>
         <p>© 2016 Copyright KAZAKUMO GAMES Corp.</p>
     </footer>
 </body>

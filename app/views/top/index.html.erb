@@ -1,8 +1,13 @@
-<h1>GENRE</h1>
-
-<% @genres.each do |g| %>
-    <%= search_form_for(@q, url: games_path, method: :get) do |f| %>
-        <%= f.hidden_field :genre_id_eq, value: g.id %>
-        <%= f.submit g.genre, class: "btn" %>
-    <% end %>
-<% end %>  
+<div id="select_genre">
+    <h1>GENRE</h1>
+    <ul>
+        <% @genres.each do |g| %>
+            <%= search_form_for(@q, url: games_path, method: :get) do |f| %>
+            <li>
+                <%= f.hidden_field :genre_id_eq, value: g.id %>
+                <%= f.submit g.genre, class: "btn" %>
+            </li>
+            <% end %>
+        <% end %>
+    </ul>  
+</div>
