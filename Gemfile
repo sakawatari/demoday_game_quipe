@@ -50,3 +50,5 @@ gem 'hirb-unicode'
 gem 'nokogiri'
 
 gem 'ransack'
+
+gem 'kaminari'
