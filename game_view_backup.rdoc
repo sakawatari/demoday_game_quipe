@@ -1,0 +1,32 @@
+<%= page_entries_info @softwares %>
+
+<div class="fillter-label">
+<%= sort_link @q, :title, "名前順" %>
+<%= sort_link @q, :id, "発売日順" %>
+</div>
+
+<table class="software_index">
+<thead>
+<tr>
+<th>メーカー</th>
+<th>ジャンル</th>
+<th>メーカージャンル</th>
+<th>発売日</th>
+<th colspan="4"></th>
+</tr>
+</thead>
+
+<tbody class="software_wrapper">
+<% @softwares.each do |product| %>
+<tr class="software_packege">
+<td><%= product.title %></td>
+<td><%= product.maker %></td>
+<td><%= product.genre_id %></td>
+<td><%= product.maker_genre %></td>
+<td><%= product.released_date %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+<%= paginate @softwares %>

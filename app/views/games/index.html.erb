@@ -1,31 +1,30 @@
-<%= page_entries_info @softwares %>
-   
-<div class="fillter-label">
-   <%= sort_link @q, :title, "名前順" %>
+<div class="search_option">
+    <%= page_entries_info @softwares %>
+
+    <div class="fillter-label">
+        <%= sort_link @q, :title, "名前順" %>
+        <%= sort_link @q, :id, "発売日順" %>
+    </div>
 </div>
 
-<table class="software_index">
-    <thead>
-        <tr>
-            <th>メーカー</th>
-            <th>ジャンル</th>
-            <th>メーカージャンル</th>
-            <th>発売日</th>
-            <th colspan="4"></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <% @softwares.each do |product| %>
-        <tr>
-            <td><%= product.title %></td>
-            <td><%= product.maker %></td>
-            <td><%= product.genre_id %></td>
-            <td><%= product.maker_genre %></td>
-            <td><%= product.released_date %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
+<div class="searchbox_wrapper">
+  <% @softwares.each do |product| %>
+    <div class="software_wrapper">
+      <%= link_to root_path do %>
+        <div class="software_image">
+          <%= image_tag 'logo.jpg', :size => '160x200' %>
+        </div>
+        <div class="software_basic">
+          <ul>
+            <li><%= product.title %></li>
+            <li><%= product.maker %></li>
+            <li><%= product.maker_genre %></li>
+            <li><%= product.released_date %></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 
 <%= paginate @softwares %>
