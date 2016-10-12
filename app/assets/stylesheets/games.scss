@@ -78,3 +78,23 @@
     text-overflow: ellipsis;
 }
 
+//　ゲーム詳細ページ
+
+.software_basic_wrapper {
+    background-color: #3e3e3e;
+    height: 200px;
+    width: 90%;
+    max-width: 800px;
+    min-width: 420px;
+    margin: auto;
+    padding: 80px 10px 10px 10px;
+}
+
+.software_img {
+    width: 160px;
+    height: 200px;
+    background-image: url('packege02.png');
+    background-size: 160px 200px;
+    float: left;
+    border-radius: 10px;
+}
