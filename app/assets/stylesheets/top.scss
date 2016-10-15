@@ -1,5 +1,7 @@
 #select_genre {
-    width: 850px;
+    width: 80%;
+    max-width: 850px;
+    min-width: 400px;
     margin: 0 auto;
 }
 
@@ -17,7 +19,7 @@
 
 #select_genre ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -25,7 +27,7 @@
 
 #select_genre li {
     list-style: none;
-    margin: 10px auto;
+    margin: 10px;
 }
 
 .btn {
@@ -43,7 +45,7 @@
 }
 
 .btn:hover {
-    background-color: rgb(217, 202, 177);
+    background-color: #e2d9cb;
     color:#3C3C3C;
     border: 5px dashed #3C3C3C;
     

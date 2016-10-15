@@ -1,1 +1,77 @@
-<%= render 'show' %>
+<div class="software_detail_wrapper">
+    <div class="detail_label">Basic Date</div>
+    <div class="basic_wrapper">
+        <%= image_tag("packege02.png", :size => "160x200", :class => "software_img")  %>
+        <ul>
+            <li>PLAYSTATION 4</li>
+            <li><%= @game.title %></li>
+            <li><%= @game.maker %></li>
+            <li><%= @game.maker_genre %></li>
+            <li>CERO：D</li>
+            <li>価格：6,700円</li>
+            <li><%= @game.released_date %></li>
+        </ul>
+    </div>
+</div>
+
+<div class="software_detail_wrapper">
+    <div class="detail_label">Detail Date</div>
+    <div class="twitter_wrapper">
+        <a class="twitter-timeline"  href="https://twitter.com/hashtag/FF15" data-widget-id="786455920033173504">#FF15 のツイート</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</div>
+
+<div class="software_introduce_wrapper">
+    <div class="detail_label">ゲームの紹介</div>
+    <%= render 'show' %>
+</div>
+
+<div class="software_detail_wrapper">
+    <div class="detail_label">関連したゲーム</div>
+    <div class="random_software_wrapper">
+        <%= link_to game_path(@random.id) do %>
+        <div class="software_basic">
+            <div class="searchbox_img">
+                <%= image_tag 'packege02.png', :size => '160x200' %>
+            </div>
+            <ul>
+                <li><%= @random.title %></li>
+                <li><%= @random.maker %></li>
+                <li><%= @random.maker_genre %></li>
+                <li><%= @random.released_date %></li>
+            </ul>
+        </div>
+        <% end %>
+    </div>
+    <div class="random_software_wrapper">
+        <%= link_to game_path(@random_2.id) do %>
+        <div class="software_basic">
+            <div class="searchbox_img">
+                <%= image_tag 'packege02.png', :size => '160x200' %>
+            </div>
+            <ul>
+                <li><%= @random_2.title %></li>
+                <li><%= @random_2.maker %></li>
+                <li><%= @random_2.maker_genre %></li>
+                <li><%= @random_2.released_date %></li>
+            </ul>
+        </div>
+        <% end %>
+    </div>
+    <div class="random_software_wrapper">
+        <%= link_to game_path(@random_3.id) do %>
+        <div class="software_basic">
+            <div class="searchbox_img">
+                <%= image_tag 'packege02.png', :size => '160x200' %>
+            </div>
+            <ul>
+                <li><%= @random_3.title %></li>
+                <li><%= @random_3.maker %></li>
+                <li><%= @random_3.maker_genre %></li>
+                <li><%= @random_3.released_date %></li>
+            </ul>
+        </div>
+        <% end %>
+    </div>
+</div>

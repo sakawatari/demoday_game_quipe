@@ -7,5 +7,8 @@ class GamesController < ApplicationController
     
     def show
       @game = Game.find(params[:id])
+      @random = Game.offset( rand(Game.count) ).first
+      @random_2 = Game.offset( rand(Game.count) ).first
+      @random_3 = Game.offset( rand(Game.count) ).first
     end
 end

@@ -11,10 +11,10 @@
   <% @softwares.each do |product| %>
     <div class="software_wrapper">
       <%= link_to game_path(product.id) do %>
-        <div class="software_image">
-            <%= image_tag 'packege02.png', :size => '160x200' %>
-        </div>
         <div class="software_basic">
+            <div class="searchbox_img">
+            <%= image_tag 'packege02.png', :size => '160x200' %>
+          </div>
           <ul>
             <li><%= product.title %></li>
             <li><%= product.maker %></li>

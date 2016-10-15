@@ -52,12 +52,9 @@
     filter: blur(1px);
 }
 
-.software_image {
+.searchbox_img {
     float: left;
-}
-
-.software_basic {
-    
+    margin: 0;
 }
 
 .software_basic ul {
@@ -80,21 +77,100 @@
 
 //　ゲーム詳細ページ
 
-.software_basic_wrapper {
+.software_detail_wrapper {
     background-color: #3e3e3e;
-    height: 200px;
+//    height: 280px;
     width: 90%;
     max-width: 800px;
     min-width: 420px;
-    margin: auto;
-    padding: 80px 10px 10px 10px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.detail_label {
+    width: 30%;
+    background-color: white;
+    color: #3e3e3e;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.basic_wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.basic_wrapper ul {
+    float: right;
+    text-align: right;
+    width: 50%;
+    padding-right: 10px;
+}
+
+.basic_wrapper li {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    white-space: wrap;
 }
 
 .software_img {
-    width: 160px;
-    height: 200px;
-    background-image: url('packege02.png');
-    background-size: 160px 200px;
-    float: left;
+//    float: left;
     border-radius: 10px;
+    margin-top: 20px;
+}
+
+.twitter_wrapper {
+    width: 200px;
+}
+
+//ゲームの紹介 render
+.software_introduce_wrapper {
+    background-color: #3e3e3e;
+//    height: 280px;
+    width: 90%;
+    max-width: 800px;
+    min-width: 420px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.intro_wrapper {
+    color: white;
+}
+
+.intro_right_wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+//ゲームランダム表示
+
+.random_software_wrapper {
+    width: 90%;
+    height: 200px;
+    min-width: 420px;
+    margin: 20px auto;
+    background-color: #313131;
+    position:relative;
+}
+
+.random_software_wrapper a {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition: 0.2s;
+}
+
+.random_software_wrapper a:hover {
+    background-color: black;
+    opacity: 0.2;
+    filter: blur(1px);
 }
