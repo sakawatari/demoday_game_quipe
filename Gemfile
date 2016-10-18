@@ -52,3 +52,7 @@ gem 'nokogiri'
 gem 'ransack'
 
 gem 'kaminari'
+
+gem 'acts-as-taggable-on', '~> 3.4'
+
+gem 'rails_12factor', group: :production

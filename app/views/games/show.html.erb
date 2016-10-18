@@ -29,49 +29,5 @@
 
 <div class="software_detail_wrapper">
     <div class="detail_label">関連したゲーム</div>
-    <div class="random_software_wrapper">
-        <%= link_to game_path(@random.id) do %>
-        <div class="software_basic">
-            <div class="searchbox_img">
-                <%= image_tag 'packege02.png', :size => '160x200' %>
-            </div>
-            <ul>
-                <li><%= @random.title %></li>
-                <li><%= @random.maker %></li>
-                <li><%= @random.maker_genre %></li>
-                <li><%= @random.released_date %></li>
-            </ul>
-        </div>
-        <% end %>
-    </div>
-    <div class="random_software_wrapper">
-        <%= link_to game_path(@random_2.id) do %>
-        <div class="software_basic">
-            <div class="searchbox_img">
-                <%= image_tag 'packege02.png', :size => '160x200' %>
-            </div>
-            <ul>
-                <li><%= @random_2.title %></li>
-                <li><%= @random_2.maker %></li>
-                <li><%= @random_2.maker_genre %></li>
-                <li><%= @random_2.released_date %></li>
-            </ul>
-        </div>
-        <% end %>
-    </div>
-    <div class="random_software_wrapper">
-        <%= link_to game_path(@random_3.id) do %>
-        <div class="software_basic">
-            <div class="searchbox_img">
-                <%= image_tag 'packege02.png', :size => '160x200' %>
-            </div>
-            <ul>
-                <li><%= @random_3.title %></li>
-                <li><%= @random_3.maker %></li>
-                <li><%= @random_3.maker_genre %></li>
-                <li><%= @random_3.released_date %></li>
-            </ul>
-        </div>
-        <% end %>
-    </div>
+    <%= render 'random' %>
 </div>
