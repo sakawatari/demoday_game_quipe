@@ -1,8 +1,10 @@
 <%= form_for(@game) do |f| %>
     <div class="field">
-        <%= f.label :tag_list, "タグ（カンマ区切り）" %><br>
-        <%= text_field_tag 'game[tag_list]', @game.tag_list.join(',') %>
+        <%= f.label :タグ %><br>
+        <ul id="game-tags"></ul>
     </div>
+  
+    
     <div class="actions">
         <%= f.submit %>
     </div>

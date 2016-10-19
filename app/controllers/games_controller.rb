@@ -1,4 +1,9 @@
 class GamesController < ApplicationController
+    
+    before_action :set_game_tags_to_gon, only: [:edit]
+    
+    before_action  :set_available_tags_to_gon, only: [:edit]
+    
     def index
       @games = Game.all
       @softwares = @search_games.page(params[:page])
@@ -14,17 +19,14 @@ class GamesController < ApplicationController
     end
     
     def edit
-        @game = Game.find(params[:id])
     end
     
     def update
         @game = Game.find(params[:id])
-        respond_to do |format|
-            if @game.update(game_params)
-                format.html { redirect_to @game, notice: 'GameDate was successfully updated.' }
-            else
-                format.html { render :edit }
-            end
+        if @game.update(game_params)
+            redirect_to @game
+        else
+            render :edit
         end
     end
     
@@ -33,4 +35,12 @@ class GamesController < ApplicationController
         params.require(:game).permit(:tag_list)
     end
     
+    def set_game_tags_to_gon
+        @game = Game.find(params[:id])
+        gon.game_tags = @game.tag_list
+    end
+    
+    def set_available_tags_to_gon
+        gon.available_tags = Game.tags_on(:tags).pluck(:name)
+    end
 end
