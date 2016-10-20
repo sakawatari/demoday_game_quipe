@@ -10,8 +10,13 @@
             <li>CERO：D</li>
             <li>価格：6,700円</li>
             <li><%= @game.released_date %></li>
+            
+        </ul>
+    </div>
+    <div class="tag_wrapper">
+        <ul>
             <li><%= render 'game_tag_list', tag_list: @game.tag_list %></li>
-            <li><%= link_to 'Edit', edit_game_path(@game) %></li>
+            <li><%= link_to 'タグを編集', edit_game_path(@game) %></li>
         </ul>
     </div>
 </div>

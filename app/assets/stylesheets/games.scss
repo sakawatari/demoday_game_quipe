@@ -78,9 +78,48 @@
 //ゲームタグ機能
 
 .label {
-    background-color: #ffff5e;
+//    background-color: #ffff5e;
+    border: 2px solid dodgerblue;
+    border-radius: 5px;
+    color: dodgerblue;
+    padding: 3px;
+}
+
+.tag_wrapper {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+.tag_wrapper ul {
+    float: right;
+    text-align: right;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.tag_wrapper li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+//    white-space: nowrap;
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+}
+
+.tag_wrapper a {
+    text-decoration: none;
+    background-color: dodgerblue;
     color: #3e3e3e;
     padding: 3px;
+    display: inline-block;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.tag_wrapper a:hover {
+    background-color: #5caeff;
 }
 
 //　ゲーム詳細ページ
