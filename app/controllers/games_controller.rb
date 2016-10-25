@@ -8,6 +8,8 @@ class GamesController < ApplicationController
       @games = Game.all
       @softwares = @search_games.page(params[:page])
       @q = Game.ransack(params[:q])
+      @tag_game = Game.tagged_with(params[:name])
+#      binding.pry
     end
     
     def show

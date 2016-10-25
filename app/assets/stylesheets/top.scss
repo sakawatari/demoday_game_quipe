@@ -6,7 +6,7 @@
 }
 
 #select_genre h1 {
-    width: 250px;
+    width: 300px;
     font-size: 60px;
     text-align: center;
     border-top: 3px solid #3C3C3C;
@@ -48,5 +48,45 @@
     background-color: #e2d9cb;
     color:#3C3C3C;
     border: 5px dashed #3C3C3C;
-    
+}
+//タグクラウド
+.css1 { font-size: 30px; }
+.css2 { font-size: 30px; }
+.css3 { font-size: 30px; }
+.css4 { font-size: 30px; }
+
+.tagcloud-wrapper {
+    width: 80%;
+    max-width: 850px;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+.tagcloud-wrapper h1 {
+    text-align: center;
+    width: 400px;
+    font-size: 60px;
+    border-top: 3px solid #3C3C3C;
+    border-bottom: 3px solid #3C3C3C;
+    color: #3C3C3C;
+    letter-spacing: 5px;
+    margin: 30px auto;
+    padding: 5px 0;
+}
+
+.tagcloud-wrapper a {
+    text-decoration: none;
+    color: white;
+    background-color: #3e3e3e;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.tagcloud-wrapper a:hover {
+    background-color: #e2d9cb;
+    color:#3C3C3C;
+    border: 5px dashed #3C3C3C;
 }
