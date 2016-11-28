@@ -3,6 +3,5 @@ class TopController < ApplicationController
         @q = Game.ransack(params[:q])
         @genres = Genre.all
         @tags = Game.tag_counts_on(:tags).order('count DESC')
-#        binding.pry
     end
 end
