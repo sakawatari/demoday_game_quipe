@@ -9,9 +9,9 @@
     width: 300px;
     font-size: 60px;
     text-align: center;
-    border-top: 3px solid #3C3C3C;
-    border-bottom: 3px solid #3C3C3C;
-    color: #3C3C3C;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    color: white;
     letter-spacing: 5px;
     margin: 10px auto;
     padding: 5px 0;
@@ -34,7 +34,7 @@
     width: 230px;
     height: 60px;
     border-radius: 10px;
-    background-color: #3C3C3C;
+    background-color: #2e2e2e;
     color: white;
     font-size: 30px;
     border-style: none;
@@ -45,9 +45,9 @@
 }
 
 .btn:hover {
-    background-color: #fdb845;
-    color:#3C3C3C;
-    border: 5px dashed #3C3C3C;
+    background-color: #3C3C3C;
+    color:white;
+    border: 5px dashed white;
 }
 //タグクラウド
 .css1 { font-size: 30px; }
@@ -66,9 +66,9 @@
     text-align: center;
     width: 400px;
     font-size: 60px;
-    border-top: 3px solid #3C3C3C;
-    border-bottom: 3px solid #3C3C3C;
-    color: #3C3C3C;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    color: white;
     letter-spacing: 5px;
     margin: 30px auto;
     padding: 5px 0;
@@ -77,7 +77,7 @@
 .tagcloud-wrapper a {
     text-decoration: none;
     color: white;
-    background-color: #3e3e3e;
+    background-color: #2e2e2e;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
@@ -86,7 +86,7 @@
 }
 
 .tagcloud-wrapper a:hover {
-    background-color: #fdb845;
-    color:#3C3C3C;
-    border: 5px dashed #3C3C3C;
+    background-color: #3c3c3c;
+    color:white;
+    border: 5px dashed white;
 }

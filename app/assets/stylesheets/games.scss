@@ -13,9 +13,9 @@
 }
 
 .fillter-label a {
-    background-color: #3e3e3e;
+    background-color: #2e2e2e;
     text-decoration: none;
-    color: #e6d9c2;
+    color: white;
     padding: 5px;
 }
 
@@ -33,7 +33,7 @@
     height: 200px;
     min-width: 420px;
     margin: 10px;
-    background-color: #3e3e3e;
+    background-color: #2e2e2e;
     position:relative;
 }
 
@@ -67,7 +67,7 @@
 .software_basic li {
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: #4A86E8;
     font-size: 20px;
     margin-bottom: 10px;
     white-space: nowrap;
@@ -125,7 +125,7 @@
 //　ゲームShowページ
 
 .software_detail_wrapper {
-    background-color: #3e3e3e;
+    background-color: #2e2e2e;
 //    height: 280px;
     width: 90%;
     max-width: 800px;
@@ -136,8 +136,8 @@
 
 .detail_label {
     width: 30%;
-    background-color: white;
-    color: #3e3e3e;
+    background-color: #D04848;
+    color: black;
     margin: 10px 0;
     padding: 5px;
     border-radius: 5px;
@@ -159,7 +159,7 @@
     list-style: none;
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
     white-space: wrap;
 }
@@ -200,7 +200,7 @@
 
 //ゲームの紹介 render
 .software_introduce_wrapper {
-    background-color: #3e3e3e;
+    background-color: #2e2e2e;
 //    height: 280px;
     width: 90%;
     max-width: 800px;
