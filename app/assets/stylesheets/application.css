@@ -17,7 +17,6 @@
 body {
     margin: 0;
     background-color: #3c3c3c;
-/*    background-color: #e2d9cb;*/
 }
 
 header {
@@ -33,7 +32,26 @@ header a {
     font-size: 50px;
     margin: 0;
     text-decoration: none;
+}
 
+header a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+header a:active {
+    text-decoration: none;
+    color: white;
+}
+
+header a:link {
+    text-decoration: none;
+    color: white;
+}
+
+header a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 nav {
@@ -83,6 +101,8 @@ nav li a {
 
 nav li a:hover {
     background-color: #6d6d6d;
+    text-decoration: none;
+    color: white;
 }
 
 dl.searchbox{
