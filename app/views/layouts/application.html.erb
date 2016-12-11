@@ -9,31 +9,43 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="flash bg-primary"><%= notice %><%= alert %></div>
 <header>
+  <ul class="header-login">
+    <% if user_signed_in? %>
+      <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path %></li>
+      <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+    <% end %>
+  </ul>
+  <div class="header-logo">
     <%= link_to 'Game Quipe', root_path %>
+  </div>
 </header>
 
 
 <nav>
-    <ul>
-        <li><a href="#">スケジュール</a></li>
-        <li><a href="#">データベース</a></li>
-        <li><a href="#">おすすめ</a></li>
-    </ul>
+  <ul>
+    <li><a href="#">スケジュール</a></li>
+    <li><a href="#">データベース</a></li>
+    <li><a href="#">おすすめ</a></li>
+  </ul>
 </nav>
 
 
 <dl class="searchbox">
-    <%= search_form_for @search, url: games_path do |f| %>
-    <dt><%= f.text_field :title_cont ,placeholder: '検索したいタイトル名を入力してください' %></dt>
-    <dd><%= f.submit ("search") , class: 'search-btn'%></dd>
-    <% end %>
+  <%= search_form_for @search, url: games_path do |f| %>
+  <dt><%= f.text_field :title_cont ,placeholder: '検索したいタイトル名を入力してください' %></dt>
+  <dd><%= f.submit ("search") , class: 'search-btn'%></dd>
+  <% end %>
 </dl>
 
 <%= yield %>
 
 <footer>
-    <p> &copy; 2016 Copyright KAZAKUMO GAMES Corp.</p>
+  <p> &copy; 2016 Copyright KAZAKUMO GAMES Corp.</p>
 </footer>
 </body>
 </html>

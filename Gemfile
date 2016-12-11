@@ -53,3 +53,4 @@ gem 'rails_12factor', group: :production
 gem 'jquery-ui-rails'
 gem 'gon'
 gem 'twitter-bootstrap-rails'
+gem 'devise'

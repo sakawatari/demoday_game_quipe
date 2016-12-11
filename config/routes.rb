@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-    resources :games, only: [:index, :show, :edit, :update] 
-    
-    root 'top#index'
+  devise_for :users
+  resources :games, only: [:index, :show, :edit, :update]
+
+  root 'top#index'
 end

@@ -22,147 +22,160 @@ body {
 header {
     background-color: #2e2e2e;
     width: 100%;
-    height: 100px;
-    text-align: center;
+    height: 30px;
+    border-bottom: 1px solid #4A86E8;
 }
 
-header a {
-    color: white;
-    line-height: 100px;
-    font-size: 50px;
-    margin: 0;
-    text-decoration: none;
+.header-login {
+  float: right;
+  list-style: none;
+  line-height: 30px;
+  margin: 0 10px;
+}
+
+.header-login li {
+  float: left;
+  margin-left: 10px;
+}
+
+.header-logo a {
+  float: left;
+  color: white;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 header a:hover {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 header a:active {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 header a:link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 header a:visited {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 nav {
-    background-color: #2e2e2e;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
+  background-color: #2e2e2e;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 .current {
-    font-size: 24px;
-    color: white;
-    border: 2px dashed white;
-    padding-left: 6px;
-    margin-right: 3px;
+  font-size: 24px;
+  color: white;
+  border: 2px dashed white;
+  padding-left: 6px;
+  margin-right: 3px;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    float: left;
-    text-align: center;
-    line-height: 50px;
-    width: calc(100% / 3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  width: calc(100% / 3);
 }
 
 nav li a {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    transition: 0.5s;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
 }
 
 nav li a:hover {
-    background-color: #6d6d6d;
-    text-decoration: none;
-    color: white;
+  background-color: #6d6d6d;
+  text-decoration: none;
+  color: white;
 }
 
 dl.searchbox{
-    width: 75%;
-    position:relative;
-    background-color:#464646;
-    border:1px solid #aaa;
-    border-radius:10px;
-    margin: 20px auto;
+  width: 75%;
+  position:relative;
+  background-color:#464646;
+  border:1px solid #aaa;
+  border-radius:10px;
+  margin: 20px auto;
 }
 dl.searchbox dt{
-    padding:3px;
+  padding:3px;
 }
 dl.searchbox dt input{
-    width:95%;
-    height:30px;
-    line-height:30px;
-    padding-left:10px;
-    background:none;
-    border:none;
-    color: #efefef;
-    outline: none;
+  width:95%;
+  height:30px;
+  line-height:30px;
+  padding-left:10px;
+  background:none;
+  border:none;
+  color: #efefef;
+  outline: none;
 }
 dl.searchbox dd{
-    position:absolute;
-    top:1px;
-    right:1px;
+  position:absolute;
+  top:1px;
+  right:1px;
 }
 .search-btn{
-    display:block;
-    background:#767676;
-    width:50px;
-    height:32px;
-    line-height:32px;
-    margin-top: 2px;
-    margin-right: 2px;
-    border:none;
-    border-radius: 5px;
-    color:#FFF;
-    float: right;
-    outline: none;
-    transition: 0.2s;
+  display:block;
+  background:#767676;
+  width:50px;
+  height:32px;
+  line-height:32px;
+  margin-top: 2px;
+  margin-right: 2px;
+  border:none;
+  border-radius: 5px;
+  color:#FFF;
+  float: right;
+  outline: none;
+  transition: 0.2s;
 }
 
 .search-btn:hover {
-    cursor: pointer;
-    background-color: #2e2e2e;
-    border: 2px dashed white;
+  cursor: pointer;
+  background-color: #2e2e2e;
+  border: 2px dashed white;
 }
 
 footer {
-    clear: left;
-    width: 100%;
-    height: 50px;
-    color: white;
-    background-color: #2e2e2e;
-    margin: 0 auto;
-    padding: 10px auto;
-    bottom: 0;
-    font-size: 12px;
-    text-align: center;
-    line-height: 50px;
+  clear: left;
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #2e2e2e;
+  margin: 0 auto;
+  padding: 10px auto;
+  bottom: 0;
+  font-size: 12px;
+  text-align: center;
+  line-height: 50px;
 }
