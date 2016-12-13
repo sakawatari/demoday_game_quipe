@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :タイトル %><br>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.label :本文 %><br>
+    <%= f.text_area :content, class: "form-control", rows: 20 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn-default pull-right" %>
   </div>
 <% end %>
