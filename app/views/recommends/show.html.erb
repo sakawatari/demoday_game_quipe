@@ -13,7 +13,7 @@
     </div>
 
     <div>
-      <%= @recommend.content %>
+      <%= markdown(@recommend.content).html_safe %>
     </div>
 
     <%= link_to '編集', edit_recommend_path(@recommend) %> |
