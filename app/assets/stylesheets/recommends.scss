@@ -5,6 +5,44 @@
   color: white;
 }
 
+.recommend-wrapper {
+  background-color: #2e2e2e;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.recommend-wrapper h3 {
+  margin: 0;
+}
+
+.recommend-new {
+  border-left: 3px solid #4A86E8;
+}
+
+.recommend-like {
+  border-left: 3px solid #FFFF0A;
+}
+
+.recommend-post {
+  border-left: 3px solid #FF9900;
+}
+
+.btn-recommend {
+  background-color: #2e2e2e;
+  padding: 10px;
+  margin: 10px auto;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-recommend:hover {
+  background-color: #737373;
+  padding: 10px;
+  margin: 10px auto;
+  color: white;
+  text-decoration: none;
+}
+
 .recommend-title {
   background-color: #2e2e2e;
   text-align: center;
@@ -37,5 +75,32 @@
   background-color: #2e2e2e;
   margin: 5px 0;
   padding: 5px;
+}
 
+.objectopen {
+	margin: 0 auto;
+}
+.objectopen input {
+	display: none;
+}
+.objectopen label {
+	color: #4776AF;
+	cursor: pointer;
+	padding: 0;
+}
+.objectopen label:hover {
+	color: #ccc;
+}
+.objectopen {
+	padding: 0;
+}
+.objectopen .oo-cont2 {
+	transition: 0.2s;
+	height: 0;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.objectopen input:checked + .oo-cont2 {
+	height: auto;
+	padding: 10px;
 }

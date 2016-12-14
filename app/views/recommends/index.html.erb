@@ -1,22 +1,31 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-    <h1>おすすめ</h1>
+    <h1 class="text-center">おすすめ</h1>
 
-    <div class="">
-      <h2>新着記事</h2>
+    <%= link_to '記事を作る', new_recommend_path, class: 'btn-recommend text-center btn-block' %>
+
+    <div class="objectopen">
+      <label for="oo-cap1">おすすめとは？▼</label>
+      <input id="oo-cap1" type="checkbox">
+      <div class="oo-cont2">
+        <p>このおすすめ機能によって、それぞれのユーザーがおすすめするゲームを記事にして共有し合う事が出来ます。</p>
+        <p>”記事を作る”から自分がおすすめしたいゲームを紹介して面白いゲームを共有していきましょう。</p>
+      </div>
+    </div>
+
+    <div class="recommend-wrapper recommend-new">
+      <h3>新着記事</h3>
       <% @recommends.each do |recommend| %>
         <%= recommend.title %>
         <%= recommend.user.name %>
         <%= link_to '詳細', recommend %>
-        <% if current_user.id == recommend.user_id %>
-          <%= link_to '編集', edit_recommend_path(recommend) %>
-        <% end %><br />
+        <br />
       <% end %>
     </div>
 
-    <div class="">
-      <h2>いいねした記事</h2>
+    <div class="recommend-wrapper recommend-like">
+      <h3>いいねした記事</h3>
       <% @like_recommends.each do |like_recommend| %>
         <%= like_recommend.recommend.title %>
         <%= like_recommend.recommend.user.name %>
@@ -25,8 +34,8 @@
       <% end %>
     </div>
 
-    <div class="">
-      <h2>投稿した記事</h2>
+    <div class="recommend-wrapper recommend-post">
+      <h3>投稿した記事</h3>
       <% @my_recommends.each do |my_recommend| %>
         <%= my_recommend.title %>
         <%= my_recommend.user.name %>
@@ -35,6 +44,5 @@
       <% end %>
     </div>
 
-    <%= link_to '記事を作る', new_recommend_path %>
   </div>
 </div>
