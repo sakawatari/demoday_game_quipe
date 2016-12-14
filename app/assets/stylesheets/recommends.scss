@@ -1,3 +1,46 @@
 // Place all the styles related to the Recommends controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  color: white;
+}
+
+.recommend-title {
+  background-color: #2e2e2e;
+  text-align: center;
+  padding: 3px;
+  width: 100%;
+  height: auto;
+}
+
+.recommend-user {
+  margin-top: 5px;
+}
+
+.recommend-content {
+  background-color: #2e2e2e;
+  padding: 3px;
+}
+
+.recommend-social {
+  background-color: #2e2e2e;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.twitter-btn {
+  background-color: #7BFFFF;
+  float: right;
+  width: auto;
+  margin-left: 5px;
+  padding: 0 3px;
+  color: black;
+  border-radius: 5px;
+}
+
+.recommend-link {
+  background-color: #2e2e2e;
+  margin: 5px 0;
+  padding: 5px;
+
+}
