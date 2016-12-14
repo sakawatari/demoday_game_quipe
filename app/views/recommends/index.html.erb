@@ -8,9 +8,10 @@
       <% @recommends.each do |recommend| %>
         <%= recommend.title %>
         <%= recommend.user.name %>
-        <%= link_to 'Show', recommend %>
-        <%= link_to 'Edit', edit_recommend_path(recommend) %>
-        <%= link_to 'Destroy', recommend, method: :delete, data: { confirm: '' } %><br />
+        <%= link_to '詳細', recommend %>
+        <% if current_user.id == recommend.user_id %>
+          <%= link_to '編集', edit_recommend_path(recommend) %>
+        <% end %><br />
       <% end %>
     </div>
 
@@ -19,7 +20,7 @@
       <% @like_recommends.each do |like_recommend| %>
         <%= like_recommend.recommend.title %>
         <%= like_recommend.recommend.user.name %>
-        <%= link_to 'Show', like_recommend.recommend %>
+        <%= link_to '詳細', like_recommend.recommend %>
         <br />
       <% end %>
     </div>
@@ -29,7 +30,7 @@
       <% @my_recommends.each do |my_recommend| %>
         <%= my_recommend.title %>
         <%= my_recommend.user.name %>
-        <%= link_to 'Show', my_recommend %>
+        <%= link_to '詳細', my_recommend %>
         <br />
       <% end %>
     </div>

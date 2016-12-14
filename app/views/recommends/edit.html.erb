@@ -4,6 +4,10 @@
 
     <%= render 'form' %>
 
+    <% if current_user.id == @recommend.user_id %>
+      <%= link_to '削除する', @recommend, method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn-danger' %><br />
+    <% end %>
+
     <%= link_to '詳細', @recommend %> |
     <%= link_to '戻る', recommends_path %>
   </div>

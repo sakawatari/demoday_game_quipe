@@ -1,5 +1,6 @@
 class RecommendsController < ApplicationController
   before_action :set_recommend, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @recommends = Recommend.all
