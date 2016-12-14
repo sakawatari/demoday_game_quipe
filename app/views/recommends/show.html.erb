@@ -1,6 +1,6 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
-  <div class="wrapper col-md-4 col-md-offset-4 col-sm-10">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <div class="recommend-title">
       <h3><%= @recommend.title %></h3>
     </div>
@@ -19,18 +19,33 @@
     <div class="recommend-social">
       <% if current_user.likes.find_by(recommend_id: @recommend.id) %>
         <%= link_to 'いいね！を取り消す', unlike_path(@recommend.id), method: :delete %>
+        <small>+<%= @recommend.likes.count %></small>
       <% else %>
         <%= link_to 'いいね！', like_path(@recommend.id), method: :post %>
+        <small>+<%= @recommend.likes.count %></small>
       <% end %>
 
-      <div class="twitter-btn">
-        Twitter
+      <div class="sns-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="sakawatariatumu">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </div>
-      <div class="twitter-btn">
-        Twitter
+
+      <div class="sns-btn">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=1904030416491235";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
       </div>
-      <div class="twitter-btn">
-        Twitter
+
+      <div class="sns-btn">
+        <script src="https://apis.google.com/js/platform.js" async defer>
+          {lang: 'ja'}
+        </script>
+        <div class="g-plusone" data-size="medium" data-annotation="none"></div>
       </div>
     </div>
 

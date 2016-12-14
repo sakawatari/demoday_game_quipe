@@ -3,6 +3,8 @@ class RecommendsController < ApplicationController
 
   def index
     @recommends = Recommend.all
+    @like_recommends = current_user.likes
+    @my_recommends = current_user.recommends
   end
 
   def show

@@ -1,16 +1,39 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
-  <div class="wrapper col-md-4 col-md-offset-4 col-sm-10">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <h1>おすすめ</h1>
 
-    <h2>新着記事</h2>
-    <% @recommends.each do |recommend| %>
-      <%= recommend.title %>
-      <%= recommend.user.name %>
-      <%= link_to 'Show', recommend %>
-      <%= link_to 'Edit', edit_recommend_path(recommend) %>
-      <%= link_to 'Destroy', recommend, method: :delete, data: { confirm: '' } %><br />
-    <% end %>
+    <div class="">
+      <h2>新着記事</h2>
+      <% @recommends.each do |recommend| %>
+        <%= recommend.title %>
+        <%= recommend.user.name %>
+        <%= link_to 'Show', recommend %>
+        <%= link_to 'Edit', edit_recommend_path(recommend) %>
+        <%= link_to 'Destroy', recommend, method: :delete, data: { confirm: '' } %><br />
+      <% end %>
+    </div>
+
+    <div class="">
+      <h2>いいねした記事</h2>
+      <% @like_recommends.each do |like_recommend| %>
+        <%= like_recommend.recommend.title %>
+        <%= like_recommend.recommend.user.name %>
+        <%= link_to 'Show', like_recommend.recommend %>
+        <br />
+      <% end %>
+    </div>
+
+    <div class="">
+      <h2>投稿した記事</h2>
+      <% @my_recommends.each do |my_recommend| %>
+        <%= my_recommend.title %>
+        <%= my_recommend.user.name %>
+        <%= link_to 'Show', my_recommend %>
+        <br />
+      <% end %>
+    </div>
+
     <%= link_to '記事を作る', new_recommend_path %>
   </div>
 </div>
