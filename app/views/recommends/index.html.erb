@@ -17,32 +17,41 @@
     <div class="recommend-wrapper recommend-new">
       <h3>新着記事</h3>
       <% @recommends.each do |recommend| %>
-        <%= recommend.title %>
-        <%= recommend.user.name %>
-        <%= link_to '詳細', recommend %>
-        <br />
+        <%= link_to recommend_path(recommend.id) do %>
+        <div class="recommend-box">
+          <ul>
+            <li><%= recommend.title %></li>
+          </ul>
+        </div>
+        <% end %>
       <% end %>
     </div>
 
     <div class="recommend-wrapper recommend-like">
       <h3>いいねした記事</h3>
       <% @like_recommends.each do |like_recommend| %>
-        <%= like_recommend.recommend.title %>
-        <%= like_recommend.recommend.user.name %>
-        <%= link_to '詳細', like_recommend.recommend %>
-        <br />
+        <%= link_to like_recommend.recommend do %>
+          <div class="recommend-box">
+            <ul>
+              <li><%= like_recommend.recommend.title %></li>
+            </ul>
+          </div>
+        <% end %>
       <% end %>
     </div>
 
     <div class="recommend-wrapper recommend-post">
       <h3>投稿した記事</h3>
       <% @my_recommends.each do |my_recommend| %>
-        <%= my_recommend.title %>
-        <%= my_recommend.user.name %>
-        <%= link_to '詳細', my_recommend %>
-        <br />
+        <%= link_to my_recommend do %>
+          <div class="recommend-box">
+            <ul>
+              <li><%= my_recommend.title %></li>
+            </ul>
+          </div>
+        <% end %>
       <% end %>
     </div>
-
+    
   </div>
 </div>

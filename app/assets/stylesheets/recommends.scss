@@ -11,6 +11,24 @@
   margin: 10px auto;
 }
 
+.recommend-box {
+  background-color: #3c3c3c;
+  transition: 0.3s;
+}
+
+.recommend-box:hover {
+  background-color: #737373;
+}
+
+.recommend-wrapper ul {
+  margin: 5px;
+  padding: 5px;
+}
+
+.recommend-wrapper li {
+  list-style: none;
+}
+
 .recommend-wrapper h3 {
   margin: 0;
 }
@@ -57,7 +75,7 @@
 
 .recommend-content {
   background-color: #2e2e2e;
-  padding: 3px;
+  padding: 10px;
 }
 
 .recommend-social {
