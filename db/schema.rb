@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161214084808) do
+ActiveRecord::Schema.define(version: 20161217065527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "game_recommends", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "recommend_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string   "title"
@@ -22,8 +29,9 @@ ActiveRecord::Schema.define(version: 20161214084808) do
     t.string   "genre_id"
     t.string   "maker_genre"
     t.string   "released_date"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "game_recommend_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -50,8 +58,9 @@ ActiveRecord::Schema.define(version: 20161214084808) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "game_recommend_id"
   end
 
   create_table "taggings", force: :cascade do |t|
