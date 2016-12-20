@@ -16,7 +16,6 @@ class RecommendsController < ApplicationController
   end
 
   def edit
-    #  @recommend = Form::Recommend.find(params[:id])
   end
 
   def create

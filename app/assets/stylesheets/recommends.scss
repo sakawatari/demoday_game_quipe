@@ -5,6 +5,11 @@
   // color: black;
 }
 
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .recommend-wrapper {
   background-color: #2e2e2e;
   padding: 10px;
@@ -29,7 +34,7 @@
   list-style: none;
 }
 
-.recommend-wrapper h3 {
+h3 {
   margin: 0;
 }
 
@@ -93,6 +98,20 @@
   background-color: #2e2e2e;
   margin: 5px 0;
   padding: 5px;
+}
+
+.recommend-link a {
+  background-color: #3c3c3c;
+  text-decoration: none;
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.recommend-link a:hover {
+  background-color: #D04848;
+  color: white;
 }
 
 .objectopen {
