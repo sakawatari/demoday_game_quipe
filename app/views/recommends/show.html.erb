@@ -48,10 +48,13 @@
         <div class="g-plusone" data-size="medium" data-annotation="none"></div>
       </div>
     </div>
-
     <div class="recommend-link">
-      link
+      <% @recommend.game_recommends.each do |game_recommend| %>
+        <%= link_to game_recommend.game.title, game_path(game_recommend.game_id) %>
+        <br>
+      <% end %>
     </div>
+
     <% if current_user.id == @recommend.user_id %>
       <%= link_to '編集', edit_recommend_path(@recommend) %> |
     <% end %>

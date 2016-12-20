@@ -1,4 +1,4 @@
-<%= form_for(@recommend) do |f| %>
+<%= form_for(@recommend, url: path, method: method) do |f| %>
   <% if @recommend.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recommend.errors.count, "error") %> prohibited this recommend from being saved:</h2>
@@ -19,6 +19,37 @@
     <%= f.label :本文 %><br>
     <%= f.text_area :content, class: "form-control", rows: 20 %>
   </div>
+
+  <div class="field">
+    <hr>
+    <b>おすすめするゲーム</b>
+    <div class="text-right">
+      <%= link_to_add_association 'ゲームを追加', f, :game_recommends,
+        class: 'btn-default',
+        data: {
+          association_insertion_node: '#detail-association-insertion-point',
+          association_insertion_method: 'append' }
+       %>
+    </div>
+
+    <table class="table table-list">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody id='detail-association-insertion-point'>
+        <div class="form-group">
+        <%= f.fields_for :game_recommends do |od| %>
+          <%= render 'game_recommend_fields', f: od %>
+        <% end %>
+        </div>
+      </tbody>
+    </table>
+  </div>
+
   <div class="actions">
     <%= f.submit class: "btn-default pull-right" %>
   </div>

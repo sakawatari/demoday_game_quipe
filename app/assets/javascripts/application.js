@@ -16,3 +16,4 @@
 //= require jquery-ui
 //= require tag-it
 //= require_tree .
+//= require cocoon

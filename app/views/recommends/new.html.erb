@@ -2,7 +2,7 @@
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <h1>新規投稿</h1>
 
-    <%= render 'form' %>
+    <%= render 'form', path: recommends_path, method: :post %>
 
     <%= link_to '戻る', recommends_path %>
   </div>

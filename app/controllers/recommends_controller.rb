@@ -12,18 +12,19 @@ class RecommendsController < ApplicationController
   end
 
   def new
-    @recommend = Recommend.new
+    @recommend = Form::Recommend.new
   end
 
   def edit
+    #  @recommend = Form::Recommend.find(params[:id])
   end
 
   def create
-    @recommend = Recommend.new(recommend_params)
+    @recommend = Form::Recommend.new(recommend_params)
     @recommend.user_id = current_user.id
     respond_to do |format|
       if @recommend.save
-        format.html { redirect_to @recommend, notice: '投稿しました。' }
+        format.html { redirect_to recommends_path, notice: '投稿しました。' }
       else
         format.html { render :new }
       end
@@ -31,9 +32,10 @@ class RecommendsController < ApplicationController
   end
 
   def update
+    @recommend = Form::Recommend.find(params[:id])
     respond_to do |format|
-      if @recommend.update(recommend_params)
-        format.html { redirect_to @recommend, notice: '編集しました。' }
+      if @recommend.update_attributes(recommend_params)
+        format.html { redirect_to recommend_path, notice: '編集しました。' }
       else
         format.html { render :edit }
       end
@@ -63,10 +65,10 @@ class RecommendsController < ApplicationController
 
   private
     def set_recommend
-      @recommend = Recommend.find(params[:id])
+      @recommend = Form::Recommend.find(params[:id])
     end
 
     def recommend_params
-      params.require(:recommend).permit(:title, :content, :user_id)
+      params.require(:form_recommend).permit(Form::Recommend::REGISTRABLE_ATTRIBUTES + [game_recommends_attributes: Form::GameRecommend::REGISTRABLE_ATTRIBUTES])
     end
 end
