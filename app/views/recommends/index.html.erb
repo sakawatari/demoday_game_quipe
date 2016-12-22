@@ -1,9 +1,9 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
-  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-12">
     <h1 class="text-center">おすすめ</h1>
 
-    <%= link_to '記事を作る', new_recommend_path, class: 'btn-recommend text-center btn-block' %>
+    <%= link_to '＋ 記事を作る', new_recommend_path, class: 'btn-recommend text-center btn-block' %>
 
     <div class="objectopen">
       <label for="oo-cap1">おすすめとは？▼</label>
@@ -14,8 +14,8 @@
       </div>
     </div>
 
-    <div class="recommend-wrapper recommend-new">
-      <h3>新着記事</h3>
+    <div class="recommend-wrapper">
+      <h3 class="recommend-new">新着記事</h3>
       <% @recommends.each do |recommend| %>
         <%= link_to recommend_path(recommend.id) do %>
         <div class="recommend-box">
@@ -27,8 +27,8 @@
       <% end %>
     </div>
 
-    <div class="recommend-wrapper recommend-like">
-      <h3>いいねした記事</h3>
+    <div class="recommend-wrapper">
+      <h3 class="recommend-like">いいねした記事</h3>
       <% @like_recommends.each do |like_recommend| %>
         <%= link_to like_recommend.recommend do %>
           <div class="recommend-box">
@@ -40,8 +40,8 @@
       <% end %>
     </div>
 
-    <div class="recommend-wrapper recommend-post">
-      <h3>投稿した記事</h3>
+    <div class="recommend-wrapper">
+      <h3 class="recommend-post">投稿した記事</h3>
       <% @my_recommends.each do |my_recommend| %>
         <%= link_to my_recommend do %>
           <div class="recommend-box">
@@ -52,6 +52,6 @@
         <% end %>
       <% end %>
     </div>
-    
+
   </div>
 </div>

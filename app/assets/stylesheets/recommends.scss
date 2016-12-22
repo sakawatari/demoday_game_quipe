@@ -1,28 +1,58 @@
 // Place all the styles related to the Recommends controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {
-  // color: black;
-}
-
 a:hover {
   color: white;
   text-decoration: none;
 }
 
+.lines-on-sides {
+    display: table;
+    text-align: center;
+    white-space: nowrap;
+
+    &:after,
+    &:before {
+        content: '';
+        display: table-cell;
+        width: 50%;
+        background: linear-gradient(transparent 50%, currentColor 50%, currentColor calc(50% + 2px), transparent calc(50% + 2px));
+        background-clip: padding;
+    }
+
+    &:after {
+        border-left: 1em solid transparent;
+    }
+
+    &:before {
+        border-right: 1em solid transparent;
+    }
+}
+
+h1 {
+  @extend .lines-on-sides;
+  color: #686868;
+  margin-bottom: 30px;
+}
+
+// index
 .recommend-wrapper {
-  background-color: #2e2e2e;
-  padding: 10px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 10px;
+  padding-bottom: 7px;
   margin: 10px auto;
 }
 
 .recommend-box {
-  background-color: #3c3c3c;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  color: white;
+  margin: 0 10px;
   transition: 0.3s;
 }
 
 .recommend-box:hover {
-  background-color: #737373;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .recommend-wrapper ul {
@@ -36,36 +66,48 @@ a:hover {
 
 h3 {
   margin: 0;
+  display: inline-block;
 }
 
 .recommend-new {
-  border-left: 3px solid #4A86E8;
+  border-left: 5px solid #4A86E8;
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 40px 5px 10px;
+  margin: 30px 0 10px;
 }
 
 .recommend-like {
-  border-left: 3px solid #FFFF0A;
+  border-left: 5px solid #FFFF0A;
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 40px 5px 10px;
+  margin: 30px 0 10px;
 }
 
 .recommend-post {
-  border-left: 3px solid #FF9900;
+  border-left: 5px solid #FF9900;
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 40px 5px 10px;
+  margin: 30px 0 10px;
 }
 
 .btn-recommend {
-  background-color: #2e2e2e;
+  background-color: rgba(255,255,255,0.4);
   padding: 10px;
   margin: 10px auto;
-  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #686868;
   transition: 0.3s;
 }
 
 .btn-recommend:hover {
-  background-color: #737373;
+  background-color: rgba(255,255,255,0.7);
   padding: 10px;
   margin: 10px auto;
-  color: white;
-  text-decoration: none;
+  color: #686868;
 }
 
+// show
 .recommend-title {
   background-color: #2e2e2e;
   text-align: center;
@@ -114,6 +156,18 @@ h3 {
   color: white;
 }
 
+// form
+.form-control {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.form-label {
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
 .objectopen {
 	margin: 0 auto;
 }
@@ -121,12 +175,15 @@ h3 {
 	display: none;
 }
 .objectopen label {
-	color: #4776AF;
+  background-color: rgba(0,0,0,0.4);
+	color: white;
 	cursor: pointer;
-	padding: 0;
+	padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 .objectopen label:hover {
-	color: #ccc;
+  background-color: rgba(0,0,0,0.6);
 }
 .objectopen {
 	padding: 0;
@@ -136,6 +193,7 @@ h3 {
 	height: 0;
 	overflow: hidden;
 	padding: 0 10px;
+  color: #686868;
 }
 .objectopen input:checked + .oo-cont2 {
 	height: auto;

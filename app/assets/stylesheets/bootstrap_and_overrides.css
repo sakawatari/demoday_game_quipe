@@ -8,7 +8,13 @@
 
   body {
       margin: 0;
-      background-color: #3c3c3c;
+      /*background-color: #3c3c3c;*/
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8ff7f0+8,ef9999+50,9dd1f9+92 */
+      background: #8ff7f0; /* Old browsers */
+      background: -moz-linear-gradient(-45deg,  #8ff7f0 8%, #ef9999 50%, #9dd1f9 92%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg,  #8ff7f0 8%,#ef9999 50%,#9dd1f9 92%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg,  #8ff7f0 8%,#ef9999 50%,#9dd1f9 92%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ff7f0', endColorstr='#9dd1f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       color: white;
   }
 

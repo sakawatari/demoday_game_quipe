@@ -1,60 +1,65 @@
 <div class="software_detail_wrapper">
-    <div class="detail_label">基本データ</div>
-    <div class="basic_wrapper">
-        <%= image_tag("packege02.png", :size => "160x200", :class => "software_img")  %>
-        <ul>
-            <li>PLAYSTATION 4</li>
-            <li><%= @game.title %></li>
-            <li><%= @game.maker %></li>
-            <li><%= @game.maker_genre %></li>
-            <li>CERO：D</li>
-            <li>価格：6,700円</li>
-            <li><%= @game.released_date %></li>
-        </ul>
-    </div>
-    <div class="tag_wrapper">
-        <ul>
-            <li><%= render 'game_tag_list', tag_list: @game.tag_list %></li>
-            <li><%= link_to 'タグを編集', edit_game_path(@game) %></li>
-        </ul>
-    </div>
+  <div class="detail_label">基本データ</div>
+  <div class="basic_wrapper">
+    <%= image_tag("packege02.png", :size => "160x200", :class => "software_img")  %>
+    <ul>
+      <li>PLAYSTATION 4</li>
+      <li><%= @game.title %></li>
+      <li><%= @game.maker %></li>
+      <li><%= @game.maker_genre %></li>
+      <li>CERO：D</li>
+      <li>価格：6,700円</li>
+      <li><%= @game.released_date %></li>
+    </ul>
+  </div>
+  <div class="tag_wrapper">
+    <ul>
+      <li><%= render 'game_tag_list', tag_list: @game.tag_list %></li>
+      <li><%= link_to 'タグを編集', edit_game_path(@game) %></li>
+    </ul>
+  </div>
 </div>
 
 <div class="software_detail_wrapper">
-    <div class="detail_label">詳細データ</div>
-    <div class="detail_card">
-        <ul>
-            <li>公式サイト</li>
-            <li>オススメ度 ★★★★☆</li>
-            <li>クリア時間 50時間</li>
-            <li>プレイ人数 １人</li>
-            <li>Youtube</li>
-            <li>ニコニコ動画</li>
-            <li>Wikipedia</li>
-            <li>攻略サイト</li>
-        </ul>
-        <div class="twitter_wrapper">
-            <a class="twitter-timeline"  href="https://twitter.com/hashtag/FF15" data-widget-id="786455920033173504">#FF15 のツイート</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-        <div class="pull-right">
-          <div class="">
-            記事数：<%= @game.game_recommends.count %>
-          </div>
-          <% @game.game_recommends.each do |game_recommend| %>
-          <%= link_to game_recommend.recommend.title, recommend_path(game_recommend.recommend_id) %>
-          <br>
-          <% end %>
-        </div>
+  <div class="detail_label">詳細データ</div>
+  <div class="detail_card">
+    <ul>
+      公式
+        <li><%= link_to "公式サイト url : http://www.jp.square-enix.com/ff15/" %></li>
+      動画
+        <li><%= link_to "Youtube" %></li>
+        <li><%= link_to "ニコニコ動画" %></li>
+      詳細
+        <li><%= link_to "Wikipedia" %></li>
+        <li><%= link_to "攻略サイト" %></li>
+      その他
+        <li><%= link_to "オススメ度 ★★★★☆" %></li>
+        <li><%= link_to "クリア時間 50時間" %></li>
+        <li><%= link_to "プレイ人数 １人" %></li>
+    </ul>
+    <div class="twitter_wrapper">
+      <h3>タイムライン</h3>
+      <a class="twitter-timeline"  href="https://twitter.com/hashtag/FF15" data-widget-id="786455920033173504">#FF15 のツイート</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
+    <div class="recommend-game-wrapper">
+      <h3>おすすめ記事</h3>
+      <div class="recommend-count">
+        記事数：<%= @game.game_recommends.count %>
+      </div>
+      <% @game.game_recommends.each do |game_recommend| %>
+        <%= link_to game_recommend.recommend.title, recommend_path(game_recommend.recommend_id) %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <div class="software_introduce_wrapper">
-    <div class="detail_label">ゲームの紹介</div>
-    <%= render 'show' %>
+  <div class="detail_label">ゲームの紹介</div>
+  <%= render 'show' %>
 </div>
 
 <div class="software_detail_wrapper">
-    <div class="detail_label">関連したゲーム</div>
-    <%= render 'random' %>
+  <div class="detail_label">関連したゲーム</div>
+  <%= render 'random' %>
 </div>
