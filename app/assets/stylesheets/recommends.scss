@@ -107,67 +107,6 @@ h3 {
   color: #686868;
 }
 
-// show
-.recommend-title {
-  background-color: #2e2e2e;
-  text-align: center;
-  padding: 3px;
-  width: 100%;
-  height: auto;
-}
-
-.recommend-user {
-  margin-top: 5px;
-}
-
-.recommend-content {
-  background-color: #2e2e2e;
-  padding: 10px;
-}
-
-.recommend-social {
-  background-color: #2e2e2e;
-  margin: 5px 0;
-  padding: 5px;
-}
-
-.sns-btn {
-  float: right;
-  margin-left: 5px;
-}
-
-.recommend-link {
-  background-color: #2e2e2e;
-  margin: 5px 0;
-  padding: 5px;
-}
-
-.recommend-link a {
-  background-color: #3c3c3c;
-  text-decoration: none;
-  display: block;
-  margin: 5px;
-  padding: 5px;
-  transition: 0.3s;
-}
-
-.recommend-link a:hover {
-  background-color: #D04848;
-  color: white;
-}
-
-// form
-.form-control {
-  background-color: rgba(255,255,255,0.4);
-}
-
-.form-label {
-  background-color: rgba(0,0,0,0.6);
-  padding: 5px;
-  margin-top: 10px;
-  width: 100%;
-}
-
 .objectopen {
 	margin: 0 auto;
 }
@@ -198,4 +137,110 @@ h3 {
 .objectopen input:checked + .oo-cont2 {
 	height: auto;
 	padding: 10px;
+}
+
+// show
+.recommend-title {
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.recommend-user {
+  color: #686868;
+  margin-top: 5px;
+  font-size: large;
+}
+
+.recommend-content {
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px;
+}
+
+.recommend-social {
+  background-color: rgba(0,0,0,0.7);
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.sns-btn {
+  float: right;
+  margin-left: 5px;
+}
+
+.recommend-link {
+  background-color: rgba(0,0,0,0.7);
+  margin: 5px 0 10px;
+  padding: 5px;
+}
+
+.recommend-link a {
+  background-color: rgba(0,0,0,0.3);
+  text-decoration: none;
+  font-size: large;
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.recommend-link a:hover {
+  background-color: white;
+  color: black;
+}
+
+.action-btn {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: large;
+}
+
+.action-btn:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+// form
+.form-control {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.form-label {
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.game-add-btn {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.6);
+  color: black;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.game-add-btn:hover {
+  color: black;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.delete-btn {
+  display: inline-block;
+  background-color: rgba(255,0,0,0.4);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: rgba(255,0,0,0.6);
 }

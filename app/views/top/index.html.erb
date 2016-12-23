@@ -1,20 +1,20 @@
 <div id="select_genre">
-    <h1>ジャンル</h1>
-    <ul>
-        <% @genres.each do |g| %>
-            <%= search_form_for(@q, url: games_path, method: :get) do |f| %>
-            <li>
-                <%= f.hidden_field :genre_id_eq, value: g.id %>
-                <%= f.submit g.genre, class: "btn" %>
-            </li>
-            <% end %>
-        <% end %>
-    </ul>
+  <h1>ジャンル</h1>
+  <ul>
+    <% @genres.each do |g| %>
+      <%= search_form_for(@q, url: games_path, method: :get) do |f| %>
+        <li>
+          <%= f.hidden_field :genre_id_eq, value: g.id %>
+          <%= f.submit g.genre, class: "btn" %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>
 
 <div class="tagcloud-wrapper">
-    <h1>タグクラウド</h1>
-    <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-        <%= link_to tag.name, { :controller => :games, :action => :index, :name => tag.name }, :class => css_class %>
-    <% end %>
+  <h1>タグクラウド</h1>
+  <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+    <%= link_to tag.name, { :controller => :games, :action => :index, :name => tag.name },    :class => css_class %>
+  <% end %>
 </div>

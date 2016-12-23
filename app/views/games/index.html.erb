@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-12">
 <!--タグ検索結果一覧-->
 <div class="searchbox_wrapper">
   <% @tag_game.each do |tag_product| %>
@@ -34,6 +36,7 @@
       <%= link_to game_path(product.id) do %>
         <div class="software_basic">
           <div class="searchbox_img">
+            <p>PlayStation 4</p>
             <%= image_tag 'packege02.png', :size => '80x100' %>
           </div>
           <ul>
@@ -50,3 +53,6 @@
 </div>
 
 <%= paginate @softwares %>
+
+  </div>
+</div>

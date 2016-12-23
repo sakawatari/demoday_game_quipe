@@ -4,6 +4,6 @@
   <%= f.collection_select :game_id, f.object.selectable_games, :id, :title, {}, class: 'form-control',size: 10 %>
   </td>
   <td>
-  <%= link_to_remove_association '削除', f, class: 'btn-default' %>
+  <%= link_to_remove_association 'delete', f, class: 'delete-btn' %>
   </td>
 </tr>

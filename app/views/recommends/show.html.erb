@@ -56,8 +56,8 @@
     </div>
 
     <% if current_user.id == @recommend.user_id %>
-      <%= link_to '編集', edit_recommend_path(@recommend) %> |
+      <%= link_to '編集', edit_recommend_path(@recommend), class: "action-btn" %>
     <% end %>
-    <%= link_to '戻る', recommends_path %>
+    <%= link_to '戻る', recommends_path, class: "action-btn" %>
   </div>
 </div>

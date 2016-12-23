@@ -5,10 +5,11 @@
     <%= render 'form', path: recommend_path(@recommend), method: :put %>
 
     <% if current_user.id == @recommend.user_id %>
-      <%= link_to '削除する', recommend_path, method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn-danger' %><br />
+      <%= link_to '削除する', recommend_path, method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'delete-btn' %><br />
     <% end %>
+    <hr>
 
-    <%= link_to '詳細', recommend_path, method: :get %> |
-    <%= link_to '戻る', recommends_path %>
+    <%= link_to '詳細', recommend_path, method: :get, class: "action-btn" %>
+    <%= link_to '戻る', recommends_path, class: "action-btn" %>
   </div>
 </div>

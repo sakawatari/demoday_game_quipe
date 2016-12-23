@@ -23,17 +23,31 @@
   <div class="header-logo">
     <%= link_to 'Game Quipe', root_path %>
   </div>
+  <%= image_tag("quipe.png", :alt => 'game_quipe', :size => "150x20", :class => 'header-icon') %>
 </header>
-
 
 <nav>
   <ul>
-    <li><a href="#">スケジュール</a></li>
-    <li><a href="#">データベース</a></li>
-    <li><%= link_to 'おすすめ', recommends_path %></li>
+    <li>
+      <%= link_to recommends_path do  %>
+        <%= image_tag("calendar.png", :alt => 'スケジュール', :size => "20x20", :class => 'nav-icon') %>
+        <span>スケジュール</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to recommends_path do  %>
+        <%= image_tag("database.png", :alt => 'データベース', :size => "20x20", :class => 'nav-icon') %>
+        <span>データベース</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to recommends_path do  %>
+        <%= image_tag("recommend.png", :alt => 'おすすめ', :size => "20x20", :class => 'nav-icon') %>
+        <span>おすすめ</span>
+      <% end %>
+    </li>
   </ul>
 </nav>
-
 
 <dl class="searchbox">
   <%= search_form_for @search, url: games_path do |f| %>
