@@ -1,58 +1,58 @@
 <div class="container">
-  <div class="wrapper col-md-8 col-md-offset-2 col-sm-12">
-<!--タグ検索結果一覧-->
-<div class="searchbox_wrapper">
-  <% @tag_game.each do |tag_product| %>
-    <div class="software_wrapper">
-      <%= link_to game_path(tag_product.id) do %>
-        <div class="software_basic">
-          <div class="searchbox_img">
-            <%= image_tag 'packege02.png', :size => '160x200' %>
-          </div>
-          <ul>
-            <li><%= tag_product.title %></li>
-            <li><%= tag_product.maker %></li>
-            <li><%= tag_product.maker_genre %></li>
-            <li><%= tag_product.released_date %></li>
-            <li><%= tag_product.tag_list %></li>
-          </ul>
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+
+    <div class="searchbox_wrapper">
+      <% @tag_game.each do |tag_product| %>
+        <div class="software_wrapper">
+          <%= link_to game_path(tag_product.id) do %>
+            <div class="software_basic">
+              <div class="searchbox_img">
+                <%= image_tag 'packege02.png', :size => '160x200' %>
+              </div>
+              <ul>
+                <li><%= tag_product.title %></li>
+                <li><%= tag_product.maker %></li>
+                <li><%= tag_product.maker_genre %></li>
+                <li><%= tag_product.released_date %></li>
+                <li><%= tag_product.tag_list %></li>
+              </ul>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  <% end %>
-</div>
 
-<div class="search_option">
-  <%= page_entries_info @softwares %>
-  <div class="fillter-label">
-    <%= sort_link @q, :title, "名前順" %>
-    <%= sort_link @q, :id, "発売日順" %>
-  </div>
-</div>
-<!--検索結果一覧-->
-<div class="searchbox_wrapper">
-  <% @softwares.each do |product| %>
-    <div class="software_wrapper">
-      <%= link_to game_path(product.id) do %>
-        <div class="software_basic">
-          <div class="searchbox_img">
-            <p>PlayStation 4</p>
-            <%= image_tag 'packege02.png', :size => '80x100' %>
-          </div>
-          <ul>
-            <li><%= product.title %></li>
-            <li><%= product.maker %></li>
-            <li><%= product.maker_genre %></li>
-            <li><%= product.released_date %></li>
-            <li><%= product.tag_list %></li>
-          </ul>
+    <div class="search_option">
+      <%= page_entries_info @softwares %>
+      <div class="fillter-label">
+        <%= sort_link @q, :title, "名前順" %>
+        <%= sort_link @q, :id, "発売日順" %>
+      </div>
+    </div>
+
+    <div class="searchbox_wrapper">
+      <% @softwares.each do |product| %>
+        <div class="software_wrapper">
+          <%= link_to game_path(product.id) do %>
+            <div class="software_basic">
+              <div class="searchbox_img">
+                <p>PlayStation 4</p>
+                <%= image_tag 'packege02.png', :size => '100x120' %>
+              </div>
+              <ul>
+                <li><%= product.title %></li>
+                <li><%= product.maker %></li>
+                <li><%= product.maker_genre %></li>
+                <li><%= product.released_date %></li>
+                <li><%= product.tag_list %></li>
+              </ul>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  <% end %>
-</div>
 
-<%= paginate @softwares %>
+    <%= paginate @softwares %>
 
   </div>
 </div>

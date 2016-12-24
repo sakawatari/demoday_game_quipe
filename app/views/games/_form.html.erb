@@ -1,10 +1,10 @@
 <%= form_for(@game) do |f| %>
-    <div class="field">
+    <div class="field tag-field">
         <%= f.label :タグ一覧 %><br>
         <ul id="game-tags"></ul>
     </div>
-  
+
     <div class="actions">
-        <%= f.submit "登録する" %>
+        <%= f.submit "登録する", class: 'action-btn pull-right' %>
     </div>
 <% end %>

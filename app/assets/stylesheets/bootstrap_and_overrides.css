@@ -12,14 +12,16 @@
   }
 
   body {
-      height: 100%;
-      margin: 0 0 50px 0;
-      background: #ffd4a3;
-      background: -moz-linear-gradient(-45deg,  #ffd4a3 0%, #f09090 50%, #91fbff 100%);
-      background: -webkit-linear-gradient(-45deg,  #ffd4a3 0%,#f09090 50%,#91fbff 100%);
-      background: linear-gradient(135deg,  #ffd4a3 0%,#f09090 50%,#91fbff 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd4a3', endColorstr='#91fbff',GradientType=1 );
-      color: white;
+    height: 100%;
+    margin: 0 0 50px 0;
+    background: rgb(255,212,163); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(255,212,163,1) 0%, rgba(240,144,144,1) 52%, rgba(204,134,134,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(255,212,163,1) 0%,rgba(240,144,144,1) 52%,rgba(204,134,134,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(255,212,163,1) 0%,rgba(240,144,144,1) 52%,rgba(204,134,134,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd4a3', endColorstr='#cc8686',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /*background-image: url("noise-grit-color-3.png");*/
+    color: white;
+
   }
 
   p {
