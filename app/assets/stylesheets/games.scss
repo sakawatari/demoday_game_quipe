@@ -247,6 +247,14 @@ padding: 3px 20px;
   transition: 0.3s;
 }
 
+.other-data {
+  background-color: rgba(0,0,0,0.3);
+  font-size: 15px;
+  padding: 5px;
+  display: block;
+  color: #428bca;
+}
+
 .game-detail-bottom {
   width: 100%;
   margin: 0 auto;
@@ -280,6 +288,23 @@ padding: 3px 20px;
 
 .recommend-game-wrapper a {
   margin: 5px 0;
+}
+
+.btn-recommend-game {
+  background-color: rgba(0,0,0,0.3);
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-recommend-game:hover {
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  margin: 10px auto;
+  color: white;
 }
 
 //ゲームの紹介 render

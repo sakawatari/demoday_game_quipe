@@ -1,0 +1,99 @@
+\l
+\d
+\d
+\d
+\l
+\d
+\l
+\d table_name
+\d User
+\d user
+\d users
+\d users
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+\d
+exit
+\d
+INSERT INTO blogs VALUES
+INSERT INTO blogs VALUES(1, 'aaa', 'bbb', '2016-11-26', '2016-11-26');
+INSERT INTO blogs VALUES(1, 'aaa', 'bbb', '2016-11-26', '2016-11-26');
+INSERT INTO blogs VALUES(2, 'aaa', 'bbb', '2016-11-26', '2016-11-26');
+UPDATE blogs SET title='ccc' where id=2;
+SELECT * FROM blog;
+SELECT * FROM blog WHERE id=2 LIMIT 1;
+SELECT * FROM blog WHERE id=2 LIMIT 3;
+SELECT * FROM blogs;
+SELECT * FROM blogs WHERE id=2 LIMIT 1;
+SELECT * FROM blogs WHERE title='aaa';
+SELECT * FROM blogs WHERE content='bbb' LIMIT 1;
+SELECT * FROM blogs ORDER BY created_at DESC;
+/d
+/z
+\z
+\z
+\z
+\d
+\d tasks
+\d relationships
+\q
+\d
+\d
+\d games
+\q
+\d games
+\q
+\d
+\d games
+\d genres
+\d genre
+\d genres
+\d games
+\d genres
+\d hardwares
+\d tags
+\d taggings
+\q
+\d conversations
+\d conversations;
+\q
+\d messages;
+\q
+\d
+\d games
+\q
+\d
+\q
+\d
+\d recommends
+exit
+\q
+\d games
+\d recommends
+\q
+\d recommends
+\d game_recommends
+\q
+\d recommends
+\d likes
+\q
+\d games
+\q
+\d games
+\q
+\d games
+\q
+\d recommends
+\q
+\s games

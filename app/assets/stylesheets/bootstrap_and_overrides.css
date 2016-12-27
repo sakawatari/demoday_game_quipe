@@ -4,26 +4,41 @@
   Use Font Awesome icons (default)
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
-  */
+*/
 
-  html {
-    min-height: 100%;
-    position: relative;
-  }
+html {
+  min-height: 100%;
+  position: relative;
+}
 
-  body {
-    height: 100%;
-    margin: 0 0 50px 0;
-    background: rgb(255,212,163); /* Old browsers */
-    background: -moz-linear-gradient(-45deg,  rgba(255,212,163,1) 0%, rgba(240,144,144,1) 52%, rgba(204,134,134,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg,  rgba(255,212,163,1) 0%,rgba(240,144,144,1) 52%,rgba(204,134,134,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg,  rgba(255,212,163,1) 0%,rgba(240,144,144,1) 52%,rgba(204,134,134,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd4a3', endColorstr='#cc8686',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    /*background-image: url("noise-grit-color-3.png");*/
-    color: white;
+body {
+  height: 100%;
+  margin: 0 0 50px 0;
+  background: rgb(255,210,107); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(255,210,107,1) 0%, rgba(255,135,124,1) 48%, rgba(125,227,237,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(255,210,107,1) 0%,rgba(255,135,124,1) 48%,rgba(125,227,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(255,210,107,1) 0%,rgba(255,135,124,1) 48%,rgba(125,227,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd26b', endColorstr='#7de3ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /*background-image: url("noise-grit-color-3.png");*/
+  color: white;
 
-  }
+}
 
-  p {
-    margin: 0;
-  }
+p {
+  margin: 0;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.btn-login {
+  background-color: rgba(0,0,0,0.4);
+  font-size: large;
+  border-style: none;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background-color: rgba(0,0,0,0.6);
+}

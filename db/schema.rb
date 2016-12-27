@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161217065527) do
+ActiveRecord::Schema.define(version: 20161224085729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "game_details", force: :cascade do |t|
+    t.text     "amazon"
+    t.text     "yodobashi"
+    t.text     "yahoo_shop"
+    t.text     "official_store"
+    t.text     "official_site"
+    t.text     "wikipedia"
+    t.text     "solution_site"
+    t.text     "youtube"
+    t.text     "niconico"
+    t.integer  "clear_time"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "game_id"
+  end
 
   create_table "game_recommends", force: :cascade do |t|
     t.integer  "game_id"
@@ -29,9 +45,8 @@ ActiveRecord::Schema.define(version: 20161217065527) do
     t.string   "genre_id"
     t.string   "maker_genre"
     t.string   "released_date"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.integer  "game_recommend_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "genres", force: :cascade do |t|
@@ -58,9 +73,8 @@ ActiveRecord::Schema.define(version: 20161217065527) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.integer  "game_recommend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "taggings", force: :cascade do |t|

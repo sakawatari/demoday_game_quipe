@@ -28,17 +28,20 @@
       <div class="detail_card">
         <ul>
           公式
-            <li><%= link_to "公式サイト url : http://www.jp.square-enix.com/ff15/" %></li>
-          動画
-            <li><%= link_to "Youtube" %></li>
-            <li><%= link_to "ニコニコ動画" %></li>
+            <li><%= link_to '公式サイト', @game.game_detail.official_site %></li>
           詳細
-            <li><%= link_to "Wikipedia" %></li>
-            <li><%= link_to "攻略サイト" %></li>
+            <li><%= link_to "Wikipedia", @game.game_detail.wikipedia %></li>
+            <li><%= link_to "攻略サイト", @game.game_detail.solution_site %></li>
+          ショップ
+            <li><%= link_to "公式ストア", @game.game_detail.official_store %></li>
+            <li><%= link_to "Amazon", @game.game_detail.amazon %></li>
+            <li><%= link_to "ヤフーショッピング", @game.game_detail.yahoo_shop %></li>
+            <li><%= link_to "ヨドバシカメラ", @game.game_detail.yodobashi %></li>
+          動画
+            <li><%= link_to 'Youtube', @game.game_detail.youtube %></li>
+            <li><%= link_to "ニコニコ動画", @game.game_detail.niconico %></li>
           その他
-            <li><%= link_to "オススメ度 ★★★★☆" %></li>
-            <li><%= link_to "クリア時間 50時間" %></li>
-            <li><%= link_to "プレイ人数 １人" %></li>
+            <li><div class="other-data">クリア時間：<%= @game.game_detail.clear_time %>時間</div></li>
         </ul>
         <h2>タイムライン</h2>
         <div class="twitter_wrapper">
@@ -51,10 +54,12 @@
             記事数：<%= @game.game_recommends.count %>
           </div>
           <% @game.game_recommends.each do |game_recommend| %>
-            <%= link_to game_recommend.recommend.title,     recommend_path(game_recommend.recommend_id) %>
+            <%= link_to game_recommend.recommend.title, recommend_path(game_recommend.recommend_id) %>
           <% end %>
         </div>
+
       </div>
+      <%= link_to '＋ 記事を作る', new_recommend_path, class: 'btn-recommend-game text-center btn-block' %>
     </div>
 
     <div class="show-label">ゲーム紹介</div>
