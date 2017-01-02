@@ -1,0 +1,6 @@
+<div class="recommend-link">
+  <h3>Link</h3>
+  <% @recommend.game_recommends.each do |game_recommend| %>
+    <%= link_to game_recommend.game.title, game_path(game_recommend.game_id) %>
+  <% end %>
+</div>

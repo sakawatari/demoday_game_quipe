@@ -14,14 +14,12 @@ html {
 body {
   height: 100%;
   margin: 0 0 50px 0;
-  background: rgb(255,210,107); /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  rgba(255,210,107,1) 0%, rgba(255,135,124,1) 48%, rgba(125,227,237,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  rgba(255,210,107,1) 0%,rgba(255,135,124,1) 48%,rgba(125,227,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  rgba(255,210,107,1) 0%,rgba(255,135,124,1) 48%,rgba(125,227,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd26b', endColorstr='#7de3ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  /*background-image: url("noise-grit-color-3.png");*/
+  background: rgb(213,245,215); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(213,245,215,1) 0%, rgba(161,216,229,1) 25%, rgba(161,216,229,1) 28%, rgba(145,189,223,1) 28%, rgba(145,189,223,1) 28%, rgba(155,229,186,1) 51%, rgba(155,229,186,1) 66%, rgba(119,217,188,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(213,245,215,1) 0%,rgba(161,216,229,1) 25%,rgba(161,216,229,1) 28%,rgba(145,189,223,1) 28%,rgba(145,189,223,1) 28%,rgba(155,229,186,1) 51%,rgba(155,229,186,1) 66%,rgba(119,217,188,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(213,245,215,1) 0%,rgba(161,216,229,1) 25%,rgba(161,216,229,1) 28%,rgba(145,189,223,1) 28%,rgba(145,189,223,1) 28%,rgba(155,229,186,1) 51%,rgba(155,229,186,1) 66%,rgba(119,217,188,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5f5d7', endColorstr='#77d9bc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: white;
-
 }
 
 p {

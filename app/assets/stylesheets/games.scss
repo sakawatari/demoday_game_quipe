@@ -53,7 +53,6 @@ h2 {
 // index
 .searchbox_wrapper {
   width: 100%;
-  // display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0  auto;
@@ -115,7 +114,6 @@ padding: 3px 20px;
 }
 
 //ゲームタグ機能
-
 #game-tags {
   background-color: rgba(255,255,255,0.3);
   border-style: none;
@@ -169,7 +167,6 @@ padding: 3px 20px;
 }
 
 //　ゲームShowページ
-
 .software_detail_wrapper {
   background-color: rgba(0,0,0,0.6);
   width: 100%;
@@ -217,7 +214,6 @@ padding: 3px 20px;
 }
 
 .software_img {
-//  float: left;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -268,7 +264,6 @@ padding: 3px 20px;
 .recommend-game-wrapper {
   width: 100%;
   max-height: 500px;
-  // background-color: black;
   margin: 0 auto;
 }
 
@@ -329,7 +324,6 @@ padding: 3px 20px;
 }
 
 //ゲームランダム表示
-
 .random_software_wrapper {
   width: 90%;
   height: 200px;
@@ -372,5 +366,4 @@ padding: 3px 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }

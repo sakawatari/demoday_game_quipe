@@ -1,76 +1,8 @@
 <div class="container">
-  <div class="wrapper col-md-12 col-sm-12 col-xs-12">
-
-    <div class="show-label">基本データ</div>
-    <div class="software_detail_wrapper">
-      <div class="basic_card">
-        <%= image_tag("packege02.png", :size => "160x200", :class => "software_img")  %>
-        <ul>
-          <li>PLAYSTATION 4</li>
-          <li><%= @game.title %></li>
-          <li><%= @game.maker %></li>
-          <li><%= @game.maker_genre %></li>
-          <li>CERO：D</li>
-          <li>価格：6,700円</li>
-          <li><%= @game.released_date %></li>
-        </ul>
-      </div>
-      <div class="tag_wrapper">
-        <ul>
-          <li><%= render 'game_tag_list', tag_list: @game.tag_list %></li>
-          <li><%= link_to 'タグを編集', edit_game_path(@game) %></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="show-label">詳細データ</div>
-    <div class="software_detail_wrapper">
-      <div class="detail_card">
-        <ul>
-          公式
-            <li><%= link_to '公式サイト', @game.game_detail.official_site %></li>
-          詳細
-            <li><%= link_to "Wikipedia", @game.game_detail.wikipedia %></li>
-            <li><%= link_to "攻略サイト", @game.game_detail.solution_site %></li>
-          ショップ
-            <li><%= link_to "公式ストア", @game.game_detail.official_store %></li>
-            <li><%= link_to "Amazon", @game.game_detail.amazon %></li>
-            <li><%= link_to "ヤフーショッピング", @game.game_detail.yahoo_shop %></li>
-            <li><%= link_to "ヨドバシカメラ", @game.game_detail.yodobashi %></li>
-          動画
-            <li><%= link_to 'Youtube', @game.game_detail.youtube %></li>
-            <li><%= link_to "ニコニコ動画", @game.game_detail.niconico %></li>
-          その他
-            <li><div class="other-data">クリア時間：<%= @game.game_detail.clear_time %>時間</div></li>
-        </ul>
-        <h2>タイムライン</h2>
-        <div class="twitter_wrapper">
-          <a class="twitter-timeline"  href="https://twitter.com/hashtag/FF15"     data-widget-id="786455920033173504">#FF15 のツイート</a>
-          <script>!function(d,s,id){var     js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d    .getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.co    m/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"    );</script>
-        </div>
-        <h2>おすすめ記事</h2>
-        <div class="recommend-game-wrapper">
-          <div class="recommend-count">
-            記事数：<%= @game.game_recommends.count %>
-          </div>
-          <% @game.game_recommends.each do |game_recommend| %>
-            <%= link_to game_recommend.recommend.title, recommend_path(game_recommend.recommend_id) %>
-          <% end %>
-        </div>
-
-      </div>
-      <%= link_to '＋ 記事を作る', new_recommend_path, class: 'btn-recommend-game text-center btn-block' %>
-    </div>
-
-    <div class="show-label">ゲーム紹介</div>
-    <div class="software_introduce_wrapper">
-      <%= render 'show' %>
-    </div>
-
-    <div class="show-label">関連したゲーム</div>
-    <div class="software_detail_wrapper">
-      <%= render 'random' %>
-    </div>
-
+  <div class="wrapper col-md-12 col-sm-12 col-xs-12">    
+    <%= render 'basic' %>
+    <%= render 'detail' %>
+    <%= render 'intro' %>
+    <%= render 'random' %>
   </div>
 </div>

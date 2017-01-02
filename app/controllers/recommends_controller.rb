@@ -3,8 +3,8 @@ class RecommendsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @recommends = Recommend.all
-    @like_recommends = current_user.likes
+    @recommends = Recommend.all.order(created_at: :desc)
+    @like_recommends = current_user.likes.order(created_at: :desc)
     @my_recommends = current_user.recommends
   end
 
@@ -62,12 +62,12 @@ class RecommendsController < ApplicationController
     redirect_to recommend
   end
 
-  private
-    def set_recommend
-      @recommend = Form::Recommend.find(params[:id])
-    end
+private
+  def set_recommend
+    @recommend = Form::Recommend.find(params[:id])
+  end
 
-    def recommend_params
-      params.require(:form_recommend).permit(Form::Recommend::REGISTRABLE_ATTRIBUTES + [game_recommends_attributes: Form::GameRecommend::REGISTRABLE_ATTRIBUTES])
-    end
+  def recommend_params
+    params.require(:form_recommend).permit(Form::Recommend::REGISTRABLE_ATTRIBUTES + [game_recommends_attributes: Form::GameRecommend::REGISTRABLE_ATTRIBUTES])
+  end
 end

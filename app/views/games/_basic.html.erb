@@ -1,0 +1,22 @@
+<div class="show-label">基本データ</div>
+<div class="software_detail_wrapper">
+  <div class="basic_card">
+    <%= image_tag("packege02.png", :size => "160x200", :class => "software_img")  %>
+    <ul>
+      <li>PLAYSTATION 4</li>
+      <li><%= @game.title %></li>
+      <li><%= @game.maker %></li>
+      <li><%= @game.maker_genre %></li>
+      <li>CERO：D</li>
+      <li>価格：6,700円</li>
+      <li><%= @game.released_date %></li>
+    </ul>
+  </div>
+
+  <div class="tag_wrapper">
+    <ul>
+      <li><%= render 'game_tag_list', tag_list: @game.tag_list %></li>
+      <li><%= link_to 'タグを編集', edit_game_path(@game) %></li>
+    </ul>
+  </div>
+</div>

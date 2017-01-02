@@ -2,7 +2,6 @@
   <% if @recommend.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recommend.errors.count, "error") %> prohibited this recommend from being saved:</h2>
-
       <ul>
       <% @recommend.errors.full_messages.each do |message| %>
         <li><%= message %></li>
