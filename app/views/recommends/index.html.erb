@@ -28,11 +28,11 @@
 
     <div class="recommend-wrapper">
       <h3 class="recommend-like">いいねした記事</h3>
-      <% @like_recommends.each do |like_recommend| %>
-        <%= link_to like_recommend.recommend do %>
+      <% @my_like_recommends.each do |my_like_recommend| %>
+        <%= link_to my_like_recommend.recommend do %>
           <div class="recommend-box">
             <ul>
-              <li><%= like_recommend.recommend.title %></li>
+              <li><%= my_like_recommend.recommend.title %></li>
             </ul>
           </div>
         <% end %>

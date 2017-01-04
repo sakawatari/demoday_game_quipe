@@ -4,7 +4,7 @@ class RecommendsController < ApplicationController
 
   def index
     @recommends = Recommend.all.order(created_at: :desc)
-    @like_recommends = current_user.likes.order(created_at: :desc)
+    @my_like_recommends = current_user.likes.order(created_at: :desc)
     @my_recommends = current_user.recommends
   end
 
