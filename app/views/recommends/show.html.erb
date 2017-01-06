@@ -16,7 +16,7 @@
     </div>
 
     <%= render 'social' %>
-    <%= render 'like' %>
+    <%= render 'link' %>
 
     <% if current_user.id == @recommend.user_id %>
       <%= link_to '編集', edit_recommend_path(@recommend), class: "action-btn" %>
