@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   has_many :recommends
   has_many :likes
+  belongs_to :game
+  has_many :stocks, dependent: :destroy
 end

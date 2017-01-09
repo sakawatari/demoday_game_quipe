@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+  <% if @game.stock_user(current_user.id) %>
+    <%= button_to game_stock_path(@game, @stock, game_id: @game.id), method: :delete, id: "stock-button", remote: true do %>
+      <%= image_tag("no-stock.png", :size => "20x20") %>
+      <span>
+        <%= @game.stocks_count %>
+      </span>
+    <% end %>
+  <% else %>
+    <%= button_to game_stocks_path(@game), id: "stock-button", remote: true do %>
+      <%= image_tag("stock.png", :size => "20x20") %>
+      <span>
+        <%= @game.stocks_count %>
+      </span>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= image_tag("stock.png", :size => "20x20") %>
+    <span>
+      <%= @game.stocks_count %>
+    </span>
+<% end %>

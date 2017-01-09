@@ -27,7 +27,7 @@
     </div>
 
     <div class="recommend-wrapper">
-      <h3 class="recommend-new">いいね記事</h3>
+      <h3 class="recommend-like">いいね記事</h3>
       <% @like_recommends.each do |lr| %>
         <%= link_to recommend_path(lr) do %>
           <div class="recommend-box">
@@ -40,7 +40,7 @@
     </div>
 
     <div class="recommend-wrapper">
-      <h3 class="recommend-like">いいねした記事</h3>
+      <h3 class="recommend-my-like">いいねした記事</h3>
       <% @my_like_recommends.each do |my_like_recommend| %>
         <%= link_to my_like_recommend.recommend do %>
           <div class="recommend-box">

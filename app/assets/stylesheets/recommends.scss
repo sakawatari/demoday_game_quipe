@@ -73,21 +73,28 @@ h3 {
 }
 
 .recommend-new {
-  border-left: 5px solid #4A86E8;
+  border-left: 5px solid #A3E987;
   background-color: rgba(0,0,0,0.6);
   padding: 5px 40px 5px 10px;
   margin: 30px 0 10px;
 }
 
 .recommend-like {
-  border-left: 5px solid #FFFF0A;
+  border-left: 5px solid #E98787;
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 40px 5px 10px;
+  margin: 30px 0 10px;
+}
+
+.recommend-my-like {
+  border-left: 5px solid #4A86E8;
   background-color: rgba(0,0,0,0.6);
   padding: 5px 40px 5px 10px;
   margin: 30px 0 10px;
 }
 
 .recommend-post {
-  border-left: 5px solid #FF9900;
+  border-left: 5px solid #FFFF51;
   background-color: rgba(0,0,0,0.6);
   padding: 5px 40px 5px 10px;
   margin: 30px 0 10px;
