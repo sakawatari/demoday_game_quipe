@@ -40,3 +40,12 @@ p {
 .btn-login:hover {
   background-color: rgba(0,0,0,0.6);
 }
+
+.service-intro-wrapper {
+  color: #686868;
+  font-size: 150%;
+}
+
+.service-intro-wrapper h4 {
+  font-weight: bold;
+}
