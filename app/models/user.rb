@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_many :likes
   belongs_to :game
   has_many :stocks, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 end

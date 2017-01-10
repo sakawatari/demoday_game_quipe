@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :recommends
   resources :games, only: [:index, :show, :edit, :update] do
     resources :stocks, only: [:create, :destroy]
+    resources :favorites, only: [:create, :destroy]
   end
 
   post 'like/:recommend_id' => 'likes#like', as: 'like'

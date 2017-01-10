@@ -25,6 +25,32 @@
       </span>
   <% end %>
 
+  <% if user_signed_in? %>
+    <% if @game.favorite_user(current_user.id) %>
+      <%= button_to game_favorite_path(@game, @favorite, game_id: @game.id), method: :delete, class: "stock-button", remote: false do %>
+        <span>お気に入り</span>
+        <%= image_tag("Hearts.png", alt: 'favorite', :size => "20x20") %>
+        <span>
+          <%= @game.favorites_count %>
+        </span>
+      <% end %>
+    <% else %>
+      <%= button_to game_favorites_path(@game), class: "stock-button", remote: false do %>
+        <span>お気に入り</span>
+        <%= image_tag("no-Hearts.png", alt: 'favorite', :size => "20x20") %>
+        <span>
+          <%= @game.favorites_count %>
+        </span>
+      <% end %>
+    <% end %>
+  <% else %>
+  　<span>お気に入り</span>
+    <%= image_tag("Hearts.png", alt: 'favorite', :size => "20x20") %>
+      <span>
+        <%= @game.favorites_count %>
+      </span>
+  <% end %>
+
   <div class="sns-btn">
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="sakawatariatumu">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </div>
