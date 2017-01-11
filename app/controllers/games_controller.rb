@@ -29,6 +29,12 @@ class GamesController < ApplicationController
     end
   end
 
+  def schedule
+    @schedules_11 = Game.where(['released_date LIKE ?', "%#{"2016年11月"}%"]).order(:released_date)
+    @schedules_12 = Game.where(['released_date LIKE ?', "%#{"2016年12月"}%"]).order(:released_date)
+    @schedules_rdd = Game.where(['released_date LIKE ?', "%#{"未定"}%"]).order(:released_date)
+  end
+
 private
   def set_game
     @game = Game.find(params[:id])

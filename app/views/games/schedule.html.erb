@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="wrapper col-md-12 col-sm-12 col-xs-12">
+    <h1>schedule</h1>
+    <h1>２０１６年１１月発売予定タイトル</h1>
+    <div class="schedule-wrapper">
+      <ul>
+      <% @schedules_11.each do |s| %>
+      <div class="schedule-game-box">
+        <%= link_to game_path(s.id) do %>
+          <li class="schedule-title"><%= s.title %></li>
+          <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
+          <br>
+        <% end %>
+      </div>
+      <% end %>
+      </ul>
+    </div>
+
+    <h1>２０１６年１2月発売予定タイトル</h1>
+    <div class="schedule-wrapper">
+      <ul>
+      <% @schedules_12.each do |s| %>
+      <div class="schedule-game-box">
+        <%= link_to game_path(s.id) do %>
+          <li><%= s.title %></li>
+          <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
+          <br>
+        <% end %>
+      </div>
+      <% end %>
+      </ul>
+    </div>
+
+    <h1>発売予定未定タイトル</h1>
+    <div class="schedule-wrapper">
+      <ul>
+      <% @schedules_rdd.each do |s| %>
+      <div class="schedule-game-box">
+        <%= link_to game_path(s.id) do %>
+          <li><%= s.title %></li>
+          <li class="pull-right"><%= s.released_date.slice!("未定") %></li>
+          <br>
+        <% end %>
+      </div>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

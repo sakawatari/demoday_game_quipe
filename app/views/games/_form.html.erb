@@ -7,25 +7,25 @@
   <div class="field tag-field">
     <%= f.fields_for :game_detail do |gd| %>
       <%= gd.label :公式サイト %><br />
-      <%= gd.url_field :official_site, class: "form-control" %>
+      <%= gd.url_field :official_site, class: "form-control", placeholder: "公式サイトのURLを貼る" %>
       <%= gd.label :Wikipedia %><br />
-      <%= gd.url_field :wikipedia, class: "form-control" %>
+      <%= gd.url_field :wikipedia, class: "form-control", placeholder: "wikipediaのURLを貼る" %>
       <%= gd.label :攻略サイト %><br />
-      <%= gd.url_field :solution_site, class: "form-control" %>
+      <%= gd.url_field :solution_site, class: "form-control", placeholder: "攻略サイトのURLを貼る" %>
       <%= gd.label :公式ストア %><br />
-      <%= gd.url_field :official_store, class: "form-control" %>
+      <%= gd.url_field :official_store, class: "form-control", placeholder: "Play Station Store/Nintendo e-shopのURLを貼る" %>
       <%= gd.label :Amazon %><br />
-      <%= gd.url_field :amazon, class: "form-control" %>
+      <%= gd.url_field :amazon, class: "form-control", placeholder: "アマゾンのURLを貼る" %>
       <%= gd.label :ヤフーショッピング %><br />
-      <%= gd.url_field :yahoo_shop, class: "form-control" %>
+      <%= gd.url_field :yahoo_shop, class: "form-control", placeholder: "ヤフーショッピングのURLを貼る" %>
       <%= gd.label :ヨドバシカメラ %><br />
-      <%= gd.url_field :yodobashi, class: "form-control" %>
+      <%= gd.url_field :yodobashi, class: "form-control", placeholder: "yodobashi.comのURLを貼る" %>
       <%= gd.label :Youtube %><br />
-      <%= gd.url_field :youtube, class: "form-control" %>
+      <%= gd.url_field :youtube, class: "form-control", placeholder: "YOUTUBEの検索一覧結果のURLを貼る" %>
       <%= gd.label :ニコニコ動画 %><br />
-      <%= gd.url_field :niconico, class: "form-control" %>
+      <%= gd.url_field :niconico, class: "form-control", placeholder: "ニコニコ動画の検索一覧結果のURLを貼る" %>
       <%= gd.label :クリア時間 %><br />
-      <%= gd.number_field :clear_time, in:1..300, class: "form-control" %>
+      <%= gd.number_field :clear_time, in:1..300, class: "form-control", placeholder: "１時間単位で入力できます" %>
     <% end %>
   </div>
 

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :recommends
   resources :games, only: [:index, :show, :edit, :update] do
+    collection do
+      get 'schedule'
+    end
     resources :stocks, only: [:create, :destroy]
     resources :favorites, only: [:create, :destroy]
   end
