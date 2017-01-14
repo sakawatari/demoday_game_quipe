@@ -29,7 +29,7 @@
     <% if @game.favorite_user(current_user.id) %>
       <%= button_to game_favorite_path(@game, @favorite, game_id: @game.id), method: :delete, class: "stock-button", remote: false do %>
         <span>お気に入り</span>
-        <%= image_tag("Hearts.png", alt: 'favorite', :size => "20x20") %>
+        <%= image_tag("musubi2-color.png", alt: 'favorite', :size => "20x20") %>
         <span>
           <%= @game.favorites_count %>
         </span>
@@ -37,7 +37,7 @@
     <% else %>
       <%= button_to game_favorites_path(@game), class: "stock-button", remote: false do %>
         <span>お気に入り</span>
-        <%= image_tag("no-Hearts.png", alt: 'favorite', :size => "20x20") %>
+        <%= image_tag("musubi2.png", alt: 'favorite', :size => "20x20") %>
         <span>
           <%= @game.favorites_count %>
         </span>
@@ -45,7 +45,7 @@
     <% end %>
   <% else %>
   　<span>お気に入り</span>
-    <%= image_tag("Hearts.png", alt: 'favorite', :size => "20x20") %>
+    <%= image_tag("musubi2.png", alt: 'favorite', :size => "20x20") %>
       <span>
         <%= @game.favorites_count %>
       </span>
