@@ -30,8 +30,13 @@ class GamesController < ApplicationController
   end
 
   def schedule
-    @schedules_11 = Game.where(['released_date LIKE ?', "%#{"2016年11月"}%"]).order(:released_date)
+    if params[:date].present?
+      @select_schedule = Game.where(['released_date LIKE ?', "%#{params[:date][:year] + "年" + params[:date][:month] + "月"}%"]).order(:released_date)
+    else
+      @select_schedule = Game.where(['released_date LIKE ?', "%#{Time.now.year.to_s + "年" + Time.now.month.to_s + "月"}%"]).order(:released_date)
+    end
     @schedules_12 = Game.where(['released_date LIKE ?', "%#{"2016年12月"}%"]).order(:released_date)
+    @schedules_11 = Game.where(['released_date LIKE ?', "%#{"2016年11月"}%"]).order(:released_date)
     @schedules_rdd = Game.where(['released_date LIKE ?', "%#{"未定"}%"]).order(:released_date)
   end
 

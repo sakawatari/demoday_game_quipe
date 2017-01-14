@@ -388,7 +388,7 @@ h2 {
 
 // スケジュール
 .schedule-wrapper {
-  background-color: rgba(0,0,0,0.6);
+  // background-color: rgba(0,0,0,0.6);
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -399,7 +399,8 @@ h2 {
 }
 
 .schedule-game-box {
-  background-color: rgba(255,255,255,0.2);
+  // background-color: rgba(255,255,255,0.2);
+  background-color: rgba(0,0,0,0.3);
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
@@ -407,7 +408,8 @@ h2 {
 }
 
 .schedule-game-box:hover {
-  background-color: rgba(255,255,255,0.3);
+  // background-color: rgba(255,255,255,0.3);
+  background-color: rgba(0,0,0,0.5);
 }
 
 .schedule-game-box a {
@@ -426,4 +428,39 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#date_year, #date_month {
+  background-color: rgba(0,0,0,0.5);
+  padding: 5px;
+}
+
+.schedule-add-btn {
+  display: inline-block;
+  float: right;
+  margin-left: 10px;
+}
+
+.add-btn {
+  position: relative;
+  left: -11px;
+  top: 13px;
+  text-align: center;
+  line-height: 15px;
+  color: white;
+  background-color: rgba(255,0,0,0.5);
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.add-btn:hover {
+  position: relative;
+  top: -5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  line-height: 30px;
+  background-color: rgba(118,171,255,0.7);
 }

@@ -3,7 +3,7 @@
     <% if @game.stock_user(current_user.id) %>
       <%= button_to game_stock_path(@game, @stock, game_id: @game.id), method: :delete, class: "stock-button", remote: false do %>
         <span>ストック</span>
-        <%= image_tag("stock.png", alt: 'stock', :size => "20x20") %>
+        <%= image_tag("stock-color.png", alt: 'stock', :size => "20x20") %>
         <span>
           <%= @game.stocks_count %>
         </span>
@@ -11,7 +11,7 @@
     <% else %>
       <%= button_to game_stocks_path(@game), class: "stock-button", remote: false do %>
         <span>ストック</span>
-        <%= image_tag("no-stock.png", alt: 'stock', :size => "20x20") %>
+        <%= image_tag("stock3.png", alt: 'stock', :size => "20x20") %>
         <span>
           <%= @game.stocks_count %>
         </span>
@@ -19,7 +19,7 @@
     <% end %>
   <% else %>
   　<span>ストック</span>
-    <%= image_tag("stock.png", alt: 'stock', :size => "20x20") %>
+    <%= image_tag("stock3.png", alt: 'stock', :size => "20x20") %>
       <span>
         <%= @game.stocks_count %>
       </span>

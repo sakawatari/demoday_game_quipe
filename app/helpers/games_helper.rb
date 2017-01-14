@@ -1,3 +1,3 @@
 module GamesHelper
-    include ActsAsTaggableOn::TagsHelper
+  include ActsAsTaggableOn::TagsHelper
 end

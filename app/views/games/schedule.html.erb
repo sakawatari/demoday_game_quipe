@@ -1,48 +1,111 @@
 <div class="container">
   <div class="wrapper col-md-12 col-sm-12 col-xs-12">
-    <h1>schedule</h1>
-    <h1>２０１６年１１月発売予定タイトル</h1>
+    <h1>発売スケジュール</h1>
+    <h1>調べたい発売月</h1>
+    <%= form_tag("/games/schedule", method: :get) do %>
+      <div class="field">
+        <%= select_year(Date.today, start_year: 2000, end_year: Time.now.year) %>
+        <%= select_month(Date.today) %>
+        <%= submit_tag "絞り込む", class: 'action-btn' %>
+      </div>
+    <% end %>
+
     <div class="schedule-wrapper">
       <ul>
-      <% @schedules_11.each do |s| %>
-      <div class="schedule-game-box">
-        <%= link_to game_path(s.id) do %>
-          <li class="schedule-title"><%= s.title %></li>
-          <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
-          <br>
+        <% @select_schedule.each do |s| %>
+          <div class="schedule-game-box">
+            <%= link_to game_path(s.id) do %>
+              <div class="schedule-add-btn">
+                <span class="pull-right add-btn">
+                  <%= s.stocks_count %>
+                </span>
+                <%= image_tag("stock.png", alt: 'stock', :size => "23x23", class: "pull-right") %>
+                <span class="pull-right add-btn">
+                  <%= s.favorites_count %>
+                </span>
+                <%= image_tag("no-Hearts.png", alt: 'favorite', :size => "23x23", class: "pull-right") %>
+              </div>
+              <li class="schedule-title"><%= s.title %></li>
+              <li class="pull-right"><%= s.released_date.delete("発売予定：").slice!(1..11) %></li>
+              <br>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-      <% end %>
       </ul>
     </div>
 
     <h1>２０１６年１2月発売予定タイトル</h1>
     <div class="schedule-wrapper">
       <ul>
-      <% @schedules_12.each do |s| %>
-      <div class="schedule-game-box">
-        <%= link_to game_path(s.id) do %>
-          <li><%= s.title %></li>
-          <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
-          <br>
+        <% @schedules_12.each do |s| %>
+          <div class="schedule-game-box">
+            <%= link_to game_path(s.id) do %>
+              <div class="schedule-add-btn">
+                <span class="pull-right add-btn">
+                  <%= s.stocks_count %>
+                </span>
+                <%= image_tag("stock.png", alt: 'stock', :size => "23x23", class: "pull-right") %>
+                <span class="pull-right add-btn">
+                  <%= s.favorites_count %>
+                </span>
+                <%= image_tag("no-Hearts.png", alt: 'favorite', :size => "23x23", class: "pull-right") %>
+              </div>
+              <li class="schedule-title"><%= s.title %></li>
+              <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
+              <br>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-      <% end %>
       </ul>
     </div>
 
-    <h1>発売予定未定タイトル</h1>
+    <h1>２０１６年１１月発売予定タイトル</h1>
     <div class="schedule-wrapper">
       <ul>
-      <% @schedules_rdd.each do |s| %>
-      <div class="schedule-game-box">
-        <%= link_to game_path(s.id) do %>
-          <li><%= s.title %></li>
-          <li class="pull-right"><%= s.released_date.slice!("未定") %></li>
-          <br>
+        <% @schedules_11.each do |s| %>
+          <div class="schedule-game-box">
+            <%= link_to game_path(s.id) do %>
+              <div class="schedule-add-btn">
+                <span class="pull-right add-btn">
+                  <%= s.stocks_count %>
+                </span>
+                <%= image_tag("stock.png", alt: 'stock', :size => "23x23", class: "pull-right") %>
+                <span class="pull-right add-btn">
+                  <%= s.favorites_count %>
+                </span>
+                <%= image_tag("no-Hearts.png", alt: 'favorite', :size => "23x23", class: "pull-right") %>
+              </div>
+              <li class="schedule-title"><%= s.title %></li>
+              <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
+              <br>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-      <% end %>
+      </ul>
+    </div>
+
+    <h1>発売予定日未定タイトル</h1>
+    <div class="schedule-wrapper">
+      <ul>
+        <% @schedules_rdd.each do |s| %>
+          <div class="schedule-game-box">
+            <%= link_to game_path(s.id) do %>
+              <div class="schedule-add-btn">
+                <span class="pull-right add-btn">
+                  <%= s.stocks_count %>
+                </span>
+                <%= image_tag("stock.png", alt: 'stock', :size => "23x23", class: "pull-right") %>
+                <span class="pull-right add-btn">
+                  <%= s.favorites_count %>
+                </span>
+                <%= image_tag("no-Hearts.png", alt: 'favorite', :size => "23x23", class: "pull-right") %>
+              </div>
+              <li class="schedule-title"><%= s.title %></li>
+              <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
+              <br>
+            <% end %>
+          </div>
+        <% end %>
       </ul>
     </div>
   </div>
