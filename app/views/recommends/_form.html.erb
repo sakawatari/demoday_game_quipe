@@ -10,6 +10,26 @@
     </div>
   <% end %>
 
+  <div class="objectopen">
+    <label for="oo-cap1">本文の書き方▼</label>
+    <input id="oo-cap1" type="checkbox">
+    <div class="oo-cont2">
+      <p>ここではマークアップ言語を使って、文章を書くことが出来るようになっています。</p>
+      <ul>
+        <li>#  見出し1</li>
+        <li>## 見出し2</li>
+        <li>*イタリック*</li>
+        <li>**太字**</li>
+        <li>~~取り消し線~~</li>
+        <li>+ リスト項目1</li>
+        <li>1. リスト項目1</li>
+        <li>> 引用</li>
+        <li>--- 水平線</li>
+        <li>[Google](http://google.com/) リンク</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="field">
     <%= f.label :タイトル, class: "form-label" %><br>
     <%= f.text_field :title, class: "form-control", autofocus: true %>

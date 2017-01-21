@@ -6,7 +6,7 @@ class RecommendsController < ApplicationController
     @recommends = Recommend.all.order(created_at: :desc)
     @like_recommends = Recommend.joins(:likes).group(:recommend_id, :title).order('count_all desc').count.keys
     @my_like_recommends = current_user.likes.order(created_at: :desc)
-    @my_recommends = current_user.recommends
+    @my_recommends = current_user.recommends.order(created_at: :desc)
   end
 
   def show

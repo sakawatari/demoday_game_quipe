@@ -1,0 +1,25 @@
+<div class="schedule-game-box">
+  <%= link_to game_path(s.id) do %>
+    <div class="schedule-add-btn">
+      <span class="pull-right add-btn">
+        <%= s.favorites_count %>
+      </span>
+      <% if s.favorite_user(current_user.id) %>
+        <%= image_tag("musubi2-color.png", alt: 'favorite', :size => "23x23", class: "pull-right") %>
+      <% else %>
+        <%= image_tag("musubi2.png", alt: 'favorite', :size => "23x23", class: "pull-right") %>
+      <% end %>
+      <span class="pull-right add-btn">
+        <%= s.stocks_count %>
+      </span>
+      <% if s.stock_user(current_user.id) %>
+      <%= image_tag("stock-color.png", alt: 'stock', :size => "23x23", class: "pull-right") %>
+      <% else %>
+      <%= image_tag("stock.png", alt: 'stock', :size => "23x23", class: "pull-right") %>
+      <% end %>
+    </div>
+    <li class="schedule-title"><%= s.title %></li>
+    <li class="pull-right"><%= s.released_date.slice!(6..16) %></li>
+    <br>
+  <% end %>
+</div>
