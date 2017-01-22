@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :games, only: [:index, :show, :edit, :update] do
     collection do
       get 'schedule'
+      get 'database'
     end
     resources :stocks, only: [:create, :destroy]
     resources :favorites, only: [:create, :destroy]

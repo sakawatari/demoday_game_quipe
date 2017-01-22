@@ -40,6 +40,13 @@ class GamesController < ApplicationController
     @schedules_rdd = Game.where(['released_date LIKE ?', "%#{"未定"}%"]).order(:released_date)
   end
 
+  def database
+    @my_stocks = current_user.stocks
+    @my_favorites = current_user.favorites
+    @my_like_recommends = current_user.likes.order(created_at: :desc)
+    @my_recommends = current_user.recommends.order(created_at: :desc)
+  end
+
 private
   def set_game
     @game = Game.find(params[:id])

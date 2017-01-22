@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="wrapper col-md-12 col-sm-12 col-xs-12">
+    <h1>マイデータ</h1>
+    <div class="my-data-wrapper">
+      <div class="my-stock-box">
+        <h3>ストック一覧</h3><br>
+        <% @my_stocks.each do |ms| %>
+          <%= ms.game.title %><br>
+        <% end %>
+      </div>
+
+      <div class="my-favorite-box">
+        <h3>お気に入り一覧</h3><br>
+        <% @my_favorites.each do |mf| %>
+          <%= mf.game.title %><br>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="recommend-wrapper">
+      <h3 class="recommend-post">投稿した記事</h3>
+      <% @my_recommends.each do |my_recommend| %>
+        <%= link_to my_recommend do %>
+          <div class="recommend-box">
+            <ul>
+              <li><%= my_recommend.title %></li>
+            </ul>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="recommend-wrapper">
+      <h3 class="recommend-my-like">いいねした記事</h3>
+      <% @my_like_recommends.each do |my_like_recommend| %>
+        <%= link_to my_like_recommend.recommend do %>
+          <div class="recommend-box">
+            <ul>
+              <li><%= my_like_recommend.recommend.title %></li>
+            </ul>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
