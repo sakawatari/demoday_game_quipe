@@ -466,19 +466,39 @@ h2 {
 }
 
 // データベース機能
+.my-genre-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.my-genre-box {
+  width: 19%;
+  min-width: 220px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 17px;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0.6);
+}
+
 .my-data-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .my-stock-box {
   width: 48%;
   background-color: rgba(0,0,0,0.6);
+  padding: 10px;
 }
 
 .my-favorite-box {
   width: 48%;
   background-color: rgba(0,0,0,0.6);
+  padding: 10px;
 }

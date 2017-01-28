@@ -41,6 +41,7 @@ class GamesController < ApplicationController
   end
 
   def database
+    @genres = Genre.all
     @my_stocks = current_user.stocks
     @my_favorites = current_user.favorites
     @my_like_recommends = current_user.likes.order(created_at: :desc)

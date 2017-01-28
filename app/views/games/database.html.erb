@@ -1,6 +1,20 @@
 <div class="container">
   <div class="wrapper col-md-12 col-sm-12 col-xs-12">
     <h1>マイデータ</h1>
+    <h1>ジャンル一覧</h1>
+    <div class="my-genre-wrapper">
+      <% @genres.each.with_index(1) do |g, index| %>
+      <div class="my-genre-box">
+        <%= g.genre %>
+        <span class="pull-right">
+          <%= image_tag("stock-color.png", alt: 'stock', :size => "23x23") %>
+          <%= @my_stocks.joins(:game).where(games: { genre_id: index }).count %>
+          <%= image_tag("musubi2-color.png", alt: 'musubi2', :size => "23x23") %>
+          <%= @my_favorites.joins(:game).where(games: { genre_id: index }).count %>
+        </span>
+      </div>
+      <% end %>
+    </div>
     <div class="my-data-wrapper">
       <div class="my-stock-box">
         <h3>ストック一覧</h3><br>
